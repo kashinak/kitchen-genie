@@ -12,52 +12,52 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    return render_template("about.html", page_title="About")
 
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    return render_template("contact.html", page_title="Contact")
 
 
 @app.route("/login")
 def login():
-    return render_template("login.html")
+    return render_template("login.html", page_title="Log In")
 
 
 @app.route("/register")
 def register():
-    return render_template("register.html")
+    return render_template("register.html", page_title="Register")
 
 
 @app.route("/group")
 def group_recipes():
-    return render_template("group_recipes.html")
+    return render_template("group_recipes.html", page_title="Group Recipes")
 
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html")
+    return render_template("profile.html", page_title="Profile")
 
 
 @app.route("/goals")
 def goals():
-    return render_template("goals.html")
+    return render_template("goals.html", page_title="Goals")
 
 
 @app.route("/recipe")
 def add_recipe():
-    return render_template("add_recipe.html")
+    return render_template("add_recipe.html", page_title="Add Recipe")
 
 
 @app.route("/recipes")
 def your_recipes():
-    return render_template("your_recipes.html")
+    return render_template("your_recipes.html", page_title="Your Recipes")
 
 
 @app.route("/logout")
 def logout():
-    return render_template("logout.html")
+    return render_template("logout.html", page_title="Log Out")
 
 
 if __name__ == "__main__":
