@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Genie</title>
+</head>
+<body>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.category_name }}<br>
+        {{ recipe.cost }}<br>
+        {{ recipe.servings }}<br>
+        {{ recipe.leftover_days }}<br>
+        {{ recipe.cook_time }}<br>
+        {{ recipe.ingredients }}<br>
+        {{ recipe.cooking_source }}<br>
+        {{ recipe.preparation }}<br>
+    {% endfor %}
+    
+</body>
+</html>
