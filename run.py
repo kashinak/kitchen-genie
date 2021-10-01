@@ -1,8 +1,7 @@
 import os
-import json
 from flask import (
-    Flask, render_template, request, 
-    flash, redirect, session, url_for)
+    Flask, flash, render_template,
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 if os.path.exists("env.py"):
@@ -23,10 +22,10 @@ def index():
     return render_template("index.html")
 
 
-app.route("/add_recipes")
-def add_recipes():
+@app.route("/group_recipes")
+def group_recipes():
     recipes = mongo.db.recipes.find()
-    return render_template("add_recipe.html", recipes=recipes)
+    return render_template("group_recipes.html", recipes=recipes)
 
 
 @app.route("/about")
@@ -42,42 +41,14 @@ def contact():
     return render_template("contact.html", page_title="Contact")
 
 
-@app.route("/login")
-def login():
-    return render_template("login.html", page_title="Log In")
-
-
 @app.route("/register")
 def register():
     return render_template("register.html", page_title="Register")
 
 
-@app.route("/group")
-def group_recipes():
-    return render_template("group_recipes.html", page_title="Group Recipes")
-
-
-@app.route("/profile")
-def profile():
-    return render_template("profile.html", page_title="Profile")
-
-
-@app.route("/goals")
-def goals():
-    return render_template("goals.html", page_title="Goals")
-
-@app.route("/recipes")
-def your_recipes():
-    return render_template("your_recipes.html", page_title="Your Recipes")
-
-
-@app.route("/logout")
-def logout():
-    return render_template("logout.html", page_title="Log Out")
-
-
 if __name__ == "__main__":
-    app.run(
-        host=os.environ.get("IP"),
-        port=int(os.environ.get("PORT")),
-        debug=True)
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)
+
+
