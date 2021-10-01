@@ -23,10 +23,10 @@ def index():
     return render_template("index.html")
 
 
-app.route("/recipes")
-def recipes():
+app.route("/add_recipes")
+def add_recipes():
     recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("add_recipe.html", recipes=recipes)
 
 
 @app.route("/about")
@@ -65,12 +65,6 @@ def profile():
 @app.route("/goals")
 def goals():
     return render_template("goals.html", page_title="Goals")
-
-
-@app.route("/recipe")
-def add_recipe():
-    return render_template("add_recipe.html", page_title="Add Recipe")
-
 
 @app.route("/recipes")
 def your_recipes():
