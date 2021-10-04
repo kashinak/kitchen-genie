@@ -44,6 +44,9 @@
 							<a class="nav-link" href="{{ url_for('group_recipes') }}">Group Recipes</a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('your_recipes') }}">Your Recipes</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
 						</li>
 					{% else %}
@@ -60,7 +63,7 @@
 	</nav>
 	
 	<!-- Page Header -->
-	<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/vegetables-on-wooden-background.jpg') }}')">
+	<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/vegetables_wooden_bg.jpg') }}')">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
