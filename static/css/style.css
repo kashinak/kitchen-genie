@@ -1,152 +1,278 @@
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: 'Exo 2', sans-serif;
-    text-transform: capitalize;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear;
-  }
-  
-  html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    overflow-x: hidden;
-  }
+/* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant Suing HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
 
-  .flashes h4 {
-    line-height: 2;
-    
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
-/*group recipes*/
+html {
+  font-size: 85%;
+  scroll-behavior: smooth;
+}
 
-#dish {
-    min-height: 100vh;
-    width: 100vw;
+body {
+  overflow-x: hidden;
+}
+
+.flashes h4 {
+  line-height: 2;
+
+}
+
+/* group recipes */
+/* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant Suing HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
+
+#group-recipes {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#group-recipes .heading h1 {
+  font-size: 4rem;
+  color: #000;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+}
+
+#group-recipes .heading h1 span {
+  color: #FFF200;
+}
+
+#group-recipes .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  width: 90%;
+}
+
+#group-recipes .box-container .box {
+  height: 20rem;
+  width: 25rem;
+  border-radius: .5rem;
+  margin: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0 0 .5rem #333;
+  box-shadow: 0 0 .5rem #333;
+}
+
+#group-recipes .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#group-recipes .box-container .box .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.6);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  color: #fff;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+#group-recipes .box-container .box .info h3 {
+  font-size: 3rem;
+}
+
+#group-recipes .box-container .box .info p {
+  font-size: 1.3rem;
+  border-bottom: 0.2rem solid #FFF200;
+  border-top: 0.2rem solid #FFF200;
+  margin: 1rem 2rem;
+}
+
+#group-recipes .box-container .box .info button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 4rem;
+  width: 14rem;
+}
+
+#group-recipes .box-container .box .info button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF200;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: -1;
+}
+
+#group-recipes .box-container .box .info button:hover::before {
+  width: 100%;
+}
+
+#group-recipes .box-container .box:hover .info {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Single Recipe Page */
+/* code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ */
+
+.recipe-hero {
+  display: grid;
+  gap: 3rem;
+}
+
+.recipe-hero-img {
+  height: 300px;
+  border-radius: var(--borderRadius);
+}
+
+.recipe-hero p i {
+  color: var(--grey-200);
+}
+
+.recipe-hero p {
+  text-transform: none;
+}
+
+.recipe-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.recipe-icons i {
+  font-size: 1.5rem;
+  color: var(--primary, 500);
+}
+
+.recipe-icons h5,
+.recipe-icons p {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.recipe-icons p {
+  color: var(--grey-600);
+}
+
+.recipe-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.recipe-tags a {
+  background: var(--primary-500);
+  border-radius: var(--borderRadius);
+  color: var(--white);
+  padding: 0.05rem 0.5rem;
+  margin: 0 0.25rem;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 992px) {
+  .recipe-hero {
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
   }
-  
-  #dish .heading h1 {
-    font-size: 4rem;
-    color: #000;
-    padding-top: 7rem;
-    margin-bottom: 2rem;
+}
+
+.recipe-content {
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem 5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .recipe-content {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
   }
-  
-  #dish .heading h1 span {
-    color: #FFF200;
-  }
-  
-  #dish .box-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 1rem auto;
-    width: 90%;
-  }
-  
-  #dish .box-container .box {
-    height: 20rem;
-    width: 25rem;
-    border-radius: .5rem;
-    margin: 2rem;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-shadow: 0 0 .5rem #333;
-            box-shadow: 0 0 .5rem #333;
-  }
-  
-  #dish .box-container .box img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  
-  #dish .box-container .box .info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(51, 51, 51, 0.6);
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    color: #fff;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  
-  #dish .box-container .box .info h3 {
-    font-size: 3rem;
-  }
-  
-  #dish .box-container .box .info p {
-    font-size: 1.3rem;
-    border-bottom: 0.2rem solid #FFF200;
-    border-top: 0.2rem solid #FFF200;
-    margin: 1rem 2rem;
-  }
-  
-  #dish .box-container .box .info button {
-    outline: none;
-    border: none;
-    border-radius: 5rem;
-    color: #333;
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-transform: capitalize;
-    letter-spacing: .2rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    height: 4rem;
-    width: 14rem;
-  }
-  
-  #dish .box-container .box .info button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #FFF200;
-    height: 100%;
-    width: 0%;
-    -webkit-transition: .2s;
-    transition: .2s;
-    z-index: -1;
-  }
-  
-  #dish .box-container .box .info button:hover::before {
-    width: 100%;
-  }
-  
-  #dish .box-container .box:hover .info {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+}
+
+.single-instruction header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.single-instruction .recipe-tags header p {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--primary-500)
+}
+
+.single-instruction > p {
+  color: var(--grey-700);
+
+}
+
+.single-instruction header div {
+  height: 2px;
+  background: var(--grey-300);
+}
+
+.second-column {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.single-ingredient {
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--grey-700);
+}
+
+.single-tool {
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--primary-500);
+  text-transform: capitalize;
+}

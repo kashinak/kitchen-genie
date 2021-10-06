@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <h2>I'm extending the base template!</h2>
-
+<section id="group-recipes" class="container">
+    <h2>{{ page_title }}</h2>
     {% for recipe in recipes %}
+    <div class="box-container">
         {{ recipe.recipe_name }}<br>
+        <div class="box">
+            <img src="static/img/avocado_toast.jpg" alt="">
+            <div class="info">
+                <h3>Avocado & Basil Toast</h3>
+                <p></p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+    {% endfor %}  
         {{ recipe.category_name }}<br>
         {{ recipe.cost }}<br>
         {{ recipe.servings }}<br>
@@ -13,21 +24,21 @@
         {{ recipe.ingredients }}<br>
         {{ recipe.cooking_source }}<br>
         {{ recipe.preparation }}<br>
-    {% endfor %}
-         <!-- group recipes starts -->
-         <section id="yourRecipes" class="container">
+
+{% endblock %}
+         
+<!-- group recipes starts -->
+         <section id="group-recipes" class="container">
             <div class="heading text-center">
-                <h1>your <span>recipes</span></h1>
+                <h1>group <span>recipes</span></h1>
             </div>
 
             <div class="box-container">
                 <div class="box">
-                    <img src="static/img/food_lasagna.jpg" alt="">
+                    <img src="static/img/avocado_toast.jpg" alt="">
                     <div class="info">
-                        <h3>Lasagna</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero ipsa quisquam, 
-                            fugit tempora aut, aliquam autem sapiente delectus odit possimus, quos dolores quaerat officia repudiandae porro? Veniam, dolorum molestiae.
-                        </p>
+                        <h3>Avocado & Basil Toast</h3>
+                        <p></p>
                         <a href="#"><button>view</button></a>
                     </div>
                 </div>
@@ -35,9 +46,7 @@
                     <img src="static/img/russian_cabbage_soup.jpg" alt="">
                     <div class="info">
                         <h3>Russian Cabbage Soup</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero ipsa quisquam, 
-                            fugit tempora aut, aliquam autem sapiente delectus odit possimus, quos dolores quaerat officia repudiandae porro? Veniam, dolorum molestiae.
-                        </p>
+                        <p></p>
                         <a href="#"><button>view</button></a>
                     </div>
                 </div>
@@ -45,29 +54,23 @@
                     <img src="static/img/vegetarian_chili.jpg" alt="">
                     <div class="info">
                         <h3>Vegetarian Chili</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero ipsa quisquam, 
-                            fugit tempora aut, aliquam autem sapiente delectus odit possimus, quos dolores quaerat officia repudiandae porro? Veniam, dolorum molestiae.
-                        </p>
-                        <a href="#"><button>view</button></a>
+                        <p></p>
+                        <a href="{{}}"><button>view</button></a>
                     </div>
                 </div>
                 <div class="box">
                     <img src="static/img/ravioli.jpg" alt="">
                     <div class="info">
                         <h3>Ravioli In Broth</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero ipsa quisquam, 
-                            fugit tempora aut, aliquam autem sapiente delectus odit possimus, quos dolores quaerat officia repudiandae porro? Veniam, dolorum molestiae.
-                        </p>
+                        <p></p>
                         <a href="#"><button>view</button></a>
                     </div>
                 </div>
                 <div class="box">
-                    <img src="static/img/pan_pizza.jpg" alt="">
+                    <img src="static/img/food_lasagna.jpg" alt="">
                     <div class="info">
-                        <h3>Vegetarian_Pan_Pizza</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero ipsa quisquam, 
-                            fugit tempora aut, aliquam autem sapiente delectus odit possimus, quos dolores quaerat officia repudiandae porro? Veniam, dolorum molestiae.
-                        </p>
+                        <h3>Lasagna</h3>
+                        <p></p>
                         <a href="#"><button>view</button></a>
                     </div>
                 </div>
@@ -75,15 +78,11 @@
                     <img src="static/img/meat_soup.jpg" alt="">
                     <div class="info">
                         <h3>Bone Broth Soup</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero ipsa quisquam, 
-                            fugit tempora aut, aliquam autem sapiente delectus odit possimus, quos dolores quaerat officia repudiandae porro? Veniam, dolorum molestiae.
-                        </p>
+                        <p></p>
                         <a href="#"><button>view</button></a>
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- group recipes end -->
 
-{% endblock %}
