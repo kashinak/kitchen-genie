@@ -29,6 +29,12 @@ def group_recipes():
     return render_template("group_recipes.html", recipes=recipes)
 
 
+@app.route("/add_recipe")
+def add_recipe():
+    recipes = mongo.db.recipes.find()
+    return render_template("add_recipe.html", recipes=recipes)
+
+
 @app.route("/about")
 def about():
     return render_template("about.html", page_title="About")
