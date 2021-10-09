@@ -31,8 +31,8 @@ def group_recipes():
 
 @app.route("/add_recipe")
 def add_recipe():
-    recipes = list(mongo.db.recipes.find())
-    return render_template("add_recipe.html", recipes=recipes)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_recipe.html", categories=categories)
 
 
 @app.route("/about")
