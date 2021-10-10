@@ -5,12 +5,10 @@
 <!-- code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ -->
 <div class="recipe-page">
     <section class="recipe-hero">
+        <h2>{{ recipe.recipe_name }}</h2>
         <img src="static/img/vegetarian_chili.jpg" class="img recipe-hero-img" alt="Vegetarian chili">
     <article>
-
-        <p class="recipe-info">A trick to peeling the chilis is to hold them with tongs and heat them over a stove flame, burning the pepper skins then place them inside a paper bag. So not to burn your hands, make sure you roll them around with your hands placed on the <i> outside</i> of the bag. 
-            You will feel the burned pepper peels slide off from the paper bag friction. Obviously if you are vegan, hold the chedder sprinkle at the end. Enjoy this delicious recipe! It lasts for three days. It tastes great drizzled over 
-            cheese omelettes or as chili bowl leftovers.
+        <p class="recipe-info">{{ recipe.description }}
         </p>
         <!-- Recipe Icons -->
         <div class="recipe-icons">
@@ -18,25 +16,26 @@
             <article>
                 <i class="fas fa-clock"></i>
                 <h5>prep time</h5>
-                <p>30 min.</p>
+                <p>{{ recipe.prep_time }}.</p>
             </article>
                <!-- Single Recipe Icon -->
                <article>
                 <i class="far fa-clock"></i>
                 <h5>cook time</h5>
-                <p>15 min.</p>
+                <p>{{ recipe.cook_time }}.</p>
             </article>
                <!-- Single Recipe Icon -->
                <article>
                 <i class="fas fa-user-friends"></i>
                 <h5>servings</h5>
-                <p>6 servings</p>
+                <p>{{ recipe.servings }}</p>
             </article>
         </div>
         <!-- Recipe Category -->
         <div class="recipe-tags">
-            Category : <a href="tag-template.html">Vegetarian</a>
-            <a href="tag-template.html">Vegan</a>
+            <h5>Category</h5>
+            <h6>{{ recipe.category_name }}</h6>
+            
         </div>
     </article>
     </section>
@@ -53,7 +52,7 @@
                 </header>
                 <p>In a large pot, (or in a pressure cooker on sauté setting), 
                     heat the olive oil over medium-high heat.
-                 </p>
+                </p>
             </div>
             <div class="single-instruction">
                 <header>
@@ -62,7 +61,7 @@
                 </header>
                 <p>Sauté the onions, garlic, and peppers until very fragrant, 
                     about 5 to 7 minutes, then transfer to the pressure cooker.
-                 </p>
+                </p>
             </div>
             <div class="single-instruction">
                 <header>
@@ -72,7 +71,7 @@
                 <p>Add the beans, lentils, tomatoes, broth or water, spices, 
                     including chipotle puree if desired, and salt and stir 
                     well to combine.
-                 </p>
+                </p>
             </div>
             <div class="single-instruction">
                 <header>
@@ -81,7 +80,7 @@
                 </header>
                 <p>Cook on high pressure for about 10 minutes, according to 
                     the instructions on your pressure cooker.
-                 </p>
+                </p>
             </div>
             <div class="single-instruction">
                 <header>
@@ -91,7 +90,7 @@
                 <p>Let pressure cooker depressurize, then remove from heat, 
                     stir, and serve. Garnish with cheddar and cilantro if
                     desired.
-                 </p>
+                </p>
             </div>
         </article>
         <article class="second-column">
@@ -147,7 +146,10 @@
             <div>
                 <i class="fas fa-utensils"></i>
                 <h4>tools</h4>
-                <p class="single-tool">Pressure Cooker</p>
+                <p class="single-tool">{{ recipe_tools }}</p>
+            </div>
+            <div>
+                <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </article>
     </section>

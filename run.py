@@ -29,8 +29,26 @@ def group_recipes():
     return render_template("group_recipes.html", recipes=recipes)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "description": request.form.get("description"),
+            "category_name": request.form.get("category_name"),
+            "cost": request.form.get("cost"),
+            "servings": request.form.get("servings"),
+            "leftover_days": request.form.get("leftover_days"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "tools": request.form.getlist("tools"),
+            "ingredients": request.form.getlist("ingredients"),
+            "preparation": request.form.getlist("preparation"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(recipe)
+        flash("Task Successfully Added")
+        return redirect(url_for("single_recipe"))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 

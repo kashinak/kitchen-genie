@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-        <h2>I'm extending the base template</h2>
+   
     <h2>{{ page_title }}</h2>
         {% for recipe in recipes %}
             {{ recipe.recipe_name }}<br>
@@ -13,7 +13,8 @@
             {{ recipe.cooking_source }}<br>
             {{ recipe.preparation }}<br>
         {% endfor %}
-        <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 60rem;">
+        <form action="{{ url_for('add_recipe') }}">
             <!-- Upload Image -->
             <img src="..." class="card-img-top" alt="...">
             <div class="input-group mb-3">
@@ -21,60 +22,43 @@
                 <input type="file" class="form-control" id="inputGroupFile01">
             </div>
             <div class="card-body">
-              <!-- Recipe Name -->
-              <h5 class="card-title">Card title</h5>
-              <!-- Recipe Description/Note -->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <!-- Recipe Name -->
+                <h5 class="card-title">Card title</h5>
+                <!-- Recipe Description -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
             </div>
-             <!-- Category Selection -->
+            <!-- Category Selection -->
             <div class="input-group mb-3">
                 <i class="far fa-folder-open"></i>
-                <select id="category_name" name="category_name" class="form-select validate" aria-label="Default select example" required>
+                <select id="category_name" name="category_name" class="form-select validate"
+                    aria-label="Default select example" required>
                     <option selected>Choose Diet Type</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="category_name"></label>
             </div>
+            <div class="input-group mb-3">
+                <label for="cost"></label>
+                <span class="input-group-text">$</span>
+                <input id="cost" name="cost" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">With textarea</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
             <!-- Submit Button -->
             <div class="row">
-                <a href="#" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i></a>
+                <div class="col">
+                    <button href="#" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i>
+
+                    </button>
+                </div>
+                
             </div>
-        </div>
- 
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                aria-describedby="basic-addon1">
-        </div>
-
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-            <span class="input-group-text" id="basic-addon2">@example.com</span>
-        </div>
-
-        <label for="basic-url" class="form-label">Your vanity URL</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-        </div>
-
-        <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-text">.00</span>
-        </div>
-
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-        </div>
-
-        <div class="input-group">
-            <span class="input-group-text">With textarea</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
+        </form>
+    </div>
 {% endblock %}
