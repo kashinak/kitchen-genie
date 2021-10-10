@@ -14,16 +14,19 @@
             {{ recipe.preparation }}<br>
         {% endfor %}
         <div class="card" style="width: 18rem;">
+            <!-- Upload Image -->
             <img src="..." class="card-img-top" alt="...">
             <div class="input-group mb-3">
                 <label class="input-group-text" for="inputGroupFile01">Upload</label>
                 <input type="file" class="form-control" id="inputGroupFile01">
             </div>
             <div class="card-body">
+              <!-- Recipe Name -->
               <h5 class="card-title">Card title</h5>
+              <!-- Recipe Description/Note -->
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-       
             </div>
+             <!-- Category Selection -->
             <div class="input-group mb-3">
                 <i class="far fa-folder-open"></i>
                 <select id="category_name" name="category_name" class="form-select validate" aria-label="Default select example" required>
@@ -34,7 +37,10 @@
                 </select>
                 <label for="category_name"></label>
             </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <!-- Submit Button -->
+            <div class="row">
+                <a href="#" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i></a>
+            </div>
         </div>
  
         <div class="input-group mb-3">
