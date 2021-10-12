@@ -1,6 +1,6 @@
 # Kitchen Genie
 
-Kitchen Genie is an online tool, bringing friends together to support each other to cook smarter with the goal of saving in in food costs. During the recent Covid-19 pandemic, the average price in food has increased by [3.7% in last 12 months in 2021]()(https://www.usinflationcalculator.com/inflation/food-inflation-in-the-united-states/)
+Kitchen Genie is an online tool, bringing friends together to support each other to cook smarter with the goal of saving in in food costs. During the recent Covid-19 pandemic, the average price in food has increased by [3.7% in last 12 months in 2021](https://www.usinflationcalculator.com/inflation/food-inflation-in-the-united-states/). Kitchen Genie makes saving money fun and delicious. Enjoy!
 
 ## User Experience (UX)
 
@@ -9,27 +9,26 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - #### First Time Player Goals
 
-  The target audience for this game is all ages. It is primariy aimed for solo game play but can be played in teams to see who beats the highest game score.
+  The target audience for this application is for anyone who wants to team up with their friends to save in food costs so they can do something else with their money. 
 
-  Player goals are:
+  User Goals are:
 
-  1. As a First Time Player, I want to play a fun and eductional game.
-  2. As a First Time Player, I want to easily grasp the rules of the game.
-  3. As a First Time Player, I want to experience listening to new sounds.
-  4. As a First Time Player, I want to know when the game begins and ends.
-  5. As a First Time Player, I want to play the game with ease, seeing my progress in real time.
+  1. As a First Time User, I want to easily grasp the User Interface. 
+  2. As a First Time User, I want to know if this application works before investing my time into it.
+  3. As a First Time User, I want to save money in food costs.
+  4. As a First Time User, I want to easily share recipes with my friends.
+  5. As a First Time User, I want to resolve pandemic isolation and strengthen my friendship bonds.
+  6. As a First Time User, I want to feel safe that my user credentials are secure.
 
-  Whale Song Memory Game is a great way for the First Time Player to meet their player goals because:
+  Kitchen Genie is a great way for the First Time User to meet their user goals because:
 
-  1. The game was sketched and designed with the user experience as central importance before writing code.
-  2. The game controls are large, the photography is beautiful and the audio volume levels are mixed evenly to allow for an easy, enjoyable viewing and listening experience.
-  3. Game layout is untuitive and easy to grasp the rules of the game.
-  4. The game provides easy-to-follow instructions appearing as a popover after pressing a large "how-to-play" button easily located beneath the game board.
-  5. Large simple game photo tiles that are clickable buttons to make it easy to play the game allowing more focus on listening and learning about whale communication.
-  6. Fun interesting sounds and visuals guide the player to start playing, follow along, end game or restart game.
-  7. Score board is located at the bottom of the game board and updates in real time.
-  8. A full screen game results popup window appears with fun sound effects and score messages that indicate if the player has won or lost.
-  9. The game interface is simple and has no commercial adds appended to the site. This pure game site, provides a learning focused gaming experience.
+  1. The application was designed with the user experience as central importance as mobile first design, before writing code.
+  2. The home page provides proof that the application works, displaying user testimonials regarding what they were able to do with the money they saved using Kitchen Genie. 
+  3. The user profile page has a personal financial goal option to fill out, to incentivize the User to regular use Kitchen Genie.
+  4. The user can tally up food savings cost after reaching their finincial food savings goal then post a testimonial to the site to encourage their comunnity of thrifty friends.
+  5. The group recipes page displays all recipes posted by your friends. The user simply logs in and has access to group recipes page and in addition has access to add recipe page consisting mostly of dropdown selection input boxes for the user to enter their own recipe. This dropdown inputs minimize user typing to speed u the process of adding a recipe to the group. 
+  6. The app serves as a basis for an online group meetup for making delicious low cost reciptes. Each recipe will inspire more conversation and expand reach within the user's friends group. 
+  7. The login and registration data is secure using encryption to store the user's sensitive login credentials.
 
   ---
 
@@ -89,6 +88,9 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   - [HTML5](https://en.wikipedia.org/wiki/HTML5)
   - [CSS3](https://en.wikipedia.org/wiki/CSS)
   - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  - [Python3](https://en.wikipedia.org/wiki/Python_%28programming_language%29)
+  - [Jinja Template](https://en.wikipedia.org/wiki/Jinja_%28template_engine%29)
+  
 
   ### Frameworks, Libraries & Programs Used
 
@@ -98,7 +100,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   2. [Google Fonts:](https://fonts.google.com/)
 
      - Google fonts,'Michroma' font is used on the main game features of the project.
-  3. [Font Bros](https://www.fontbros.com/)
+  3. [Font Awesome](https://fontawesome.com/)
 
      - Font Bros, 'FishOutOfWater' font is used on the game title and results popup bolded message.
   4. [jQuery:](https://jquery.com/)
@@ -110,10 +112,10 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   6. [GitHub:](https://github.com/)
 
      - GitHub was used to store the project's code after being pushed from Git.
-  7. [Adobe Premiere Pro](https://www.adobe.com/products/premiere.html)
+  7. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
      - Adobe Premiere Pro was used to edit whale sounds down to 1 second each and audio mix all whale sounds at the same audio level to provide consistency for the player's user experience.
-  8. [Adobe Media Encoder](https://www.adobe.com/products/media-encoder.html)
+  8. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
 
      - Adobe Media Encoder was used to compress large file of animated wave into a smaller file more suitable for web playback.
   9. [Balsamiq](https://balsamiq.com/)
