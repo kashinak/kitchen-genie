@@ -13,51 +13,111 @@
             {{ recipe.cooking_source }}<br>
             {{ recipe.preparation }}<br>
         {% endfor %}
-    <div class="card" style="width: 60rem;">
+    <div class="card">
         <form action="{{ url_for('add_recipe') }}">
-            <!-- Upload Image -->
-            <img src="..." class="card-img-top" alt="...">
-            <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                <input type="file" class="form-control" id="inputGroupFile01">
-            </div>
-            <div class="card-body">
-                <!-- Recipe Name -->
-                <h5 class="card-title">Card title</h5>
-                <!-- Recipe Description -->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-            </div>
-            <!-- Category Selection -->
-            <div class="input-group mb-3">
-                <i class="far fa-folder-open"></i>
-                <select id="category_name" name="category_name" class="form-select validate"
-                    aria-label="Default select example" required>
-                    <option selected>Choose Diet Type</option>
-                    {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endfor %}
-                </select>
-                <label for="category_name"></label>
-            </div>
-            <div class="input-group mb-3">
-                <label for="cost"></label>
-                <span class="input-group-text">$</span>
-                <input id="cost" name="cost" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text">.00</span>
-            </div>
-            <div class="input-group">
-                <span class="input-group-text">With textarea</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-            <!-- Submit Button -->
-            <div class="row">
-                <div class="col">
-                    <button href="#" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i>
-
-                    </button>
+            <div class="row card-body">
+                <!-- Upload Image -->
+                <div class="col-12">
+                    <img src="..." class="card-img-top" alt="...">
                 </div>
-                
+                <div class="col-12 input-group mb-3">
+                    <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                    <input type="file" class="form-control" id="inputGroupFile01">
+                </div>
+                <!-- Recipe Name -->
+                <div class="col-12">
+                    <div class="row input-group input-group-lg">
+                        <label for="recipe_name"></label>
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Add Recipe Name</span>
+                        <input id="recipe_name" name="recipe_name" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
+                 <!-- Recipe Description -->
+                <div class="col-12 input-group">
+                    <label for="description"></label>
+                    <span class="input-group-text">Enter Recipe Description</span>
+                    <textarea id="description" name="description" class="form-control card-text"
+                        aria-label="With textarea"></textarea>
+                </div>
+                <!-- Category Selection -->
+                <div class="col-12 input-group mb-3">
+                    <select id="category_name" name="category_name" class="form-select validate"
+                        aria-label="Default select example" required>
+                        <option selected>Choose Diet Type</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name"></label>
+                </div>
+                <!-- Add Food Cost -->
+                <div class="col-12 input-group mb-3">
+                    <label for="cost">Add Food Cost</label>
+                    <span class="input-group-text">$</span>
+                    <input id="cost" name="cost" type="text" class="form-control"
+                        aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                </div>
+                <!-- Serving Selection -->
+                <div class="col-12 input-group mb-3">
+                    <select id="serving_size" name="serving_size" class="form-select validate"
+                        aria-label="Default select example" required>
+                        <option selected>Choose Serving Size</option>
+                        {% for serving in servings %}
+                        <option value="{{ serving.serving_size }}">{{ serving.serving_size }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="serving_size"></label>
+                </div>
+                <!-- Leftover Selection -->
+                <div class="col-12 input-group mb-3">
+                    <select id="leftover_days" name="leftover_days" class="form-select validate"
+                        aria-label="Default select example" required>
+                        <option selected>Choose Leftover Days</option>
+                        {% for leftover in leftovers %}
+                        <option value="{{ leftover.leftover_days }}">{{ leftover.leftover_days }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="leftover_days"></label>
+                </div>
+                <!-- Prep Time Selection -->
+                <div class="col-12 input-group mb-3">
+                    <select id="prep_time" name="prep_time" class="form-select validate"
+                        aria-label="Default select example" required>
+                        <option selected>Choose Prep Time</option>
+                        {% for prep in prep_times %}
+                        <option value="{{ prep.prep_time }}">{{ prep.prep_time }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="prep_time"></label>
+                </div>
+                <!-- Cook Time Selection -->
+                <div class="col-12 input-group mb-3">
+                    <select id="cook_time" name="cook_time" class="form-select validate"
+                        aria-label="Default select example" required>
+                        <option selected>Choose Cook Time</option>
+                        {% for cook in cook_times %}
+                        <option value="{{ cook.cook_time }}">{{ cook.cook_time }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="cook_time"></label>
+                </div>
+                <!-- Primary Tool Selection -->
+                <div class="col-12 input-group mb-3">
+                    <select id="tools" name="tools" class="form-select validate" aria-label="Default select example"
+                        required>
+                        <option selected>Choose Primary Tools</option>
+                        {% for tool in tools %}
+                        <option value="{{ tool.tools }}">{{ tool.tools }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="tools"></label>
+                </div>
+                <!-- Submit Button -->
+                <div class="col-12">
+                    <button href="#" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i></button>
+                </div>
             </div>
         </form>
     </div>

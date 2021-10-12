@@ -18,6 +18,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: #44403b;
 }
 
 .flashes h4 {
@@ -276,3 +277,17 @@ body {
   color: var(--primary-500);
   text-transform: capitalize;
 }
+
+/* Add Recipe Page */
+/* Box Shadow styles from w3schools https://www.w3schools.com/css/css3_shadows_box.asp */
+
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  /* my code */
+  width: 60rem;
+  background-color: #a94327
+}
+
+/* my code */
