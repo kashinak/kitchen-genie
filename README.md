@@ -115,13 +115,21 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   7. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
      - Adobe Premiere Pro was used to edit whale sounds down to 1 second each and audio mix all whale sounds at the same audio level to provide consistency for the player's user experience.
-  8. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+
+  8. [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/)
+      
+      - Installed third-party library to get Flask to communicate with Mongo.
+
+  9. [Python's OS Module](https://www.pythonforbeginners.com/os/pythons-os-module)
+
+     - OS allows Python Flask application to set environment variables to store sensitive data and boost security.
+  10. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
 
      - Adobe Media Encoder was used to compress large file of animated wave into a smaller file more suitable for web playback.
-  9. [Balsamiq](https://balsamiq.com/)
+  11. [Balsamiq](https://balsamiq.com/)
 
      - Balsamiq was used to create the [wireframes](https://github.com/kashinak/whale-song-memory-game/tree/main/assets/wireframes) during the design process.
-  10. [draw.io](https://drawio-app.com/product/)
+  12. [draw.io](https://drawio-app.com/product/)
 
   - Draw.io was used to draw a simple flow chart to map out the order of Javascript game functionality.
 

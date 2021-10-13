@@ -49,21 +49,21 @@ def add_recipe():
         mongo.db.tasks.insert_one(recipe)
         flash("Task Successfully Added")
         return redirect(url_for("single_recipe"))
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    servings = mongo.db.servings.find().sort("serving_size", 1)
-    leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
-    prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
-    cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
-    tools = mongo.db.tools.find().sort("tools", 1)
-    ingredients = mongo.db.ingredients.find().sort("ingredients", 1)
-    preparation = mongo.db.ingredients.find().sort("preparation", 1)
-    created_by = mongo.db.created_by.find("created_by")
+    categories = mongo.db.categories.find().sort("category_name")
+    servings = mongo.db.servings.find().sort("serving_size")
+    leftovers = mongo.db.leftovers.find().sort("leftover_days")
+    prep_times = mongo.db.prep_times.find().sort("prep_time")
+    cook_times = mongo.db.cook_times.find().sort("cook_time")
+    tools = mongo.db.tools.find().sort("tools")
+    # ingredients = mongo.db.ingredients.find("ingredients")
+    # preparation = mongo.db.ingredients.find("preparation")
+    # created_by = mongo.db.created_by.find("created_by")
     return render_template(
-        "add_recipe.html", categories=categories, 
-        servings=servings, leftovers=leftovers, 
-        prep_times=prep_times, cook_times=cook_times, 
-        tools=tools, ingredients=ingredients, 
-        preparation=preparation, created_by=created_by)
+        "add_recipe.html", categories=categories,
+        servings=servings, leftovers=leftovers,
+        prep_times=prep_times, cook_times=cook_times, tools=tools)
+        # tools=tools, ingredients=ingredients,
+        # preparation=preparation, created_by=created_by)
 
 
 @app.route("/about")
@@ -181,9 +181,7 @@ def single_recipe():
         prep_times=prep_times, cook_times=cook_times, tools=tools)
 
 
-
 if __name__ == "__main__":
-    app.run(
-        host=os.environ.get("IP"),
-        port=int(os.environ.get("PORT")),
-        debug=True)
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)
