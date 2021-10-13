@@ -114,21 +114,59 @@
                     </select>
                     <label for="tools"></label>
                 </div>
+                <!-- Add Ingredients dynamic input boxes -->
                 <div class="form-row" id="ingredients-row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                      <!-- input boxes to add ingredients one-by-one-->
-                      <label for="ingredient">Ingredients: </label>
-                      <input type="text" class="form-control ingredient" name="ingredient" placeholder="3 peeled peppers" minlength=8 required/>
-                      <input type="text" class="form-control ingredient" name="ingredient" placeholder="1/4 cup almond milk" minlength=8 required/>
-                      <input type="text" class="form-control ingredient" name="ingredient" placeholder="8oz filtered water" minlength=8 required/>
-                      <input type="text" class="form-control ingredient" name="ingredient" placeholder="1/2 cup grated chedder" minlength=8 required/>
-                      <!--buttons to add / remove input boxes-->
-                      <button type="button" class="new-input-btn btn-ingredient"><i class="fa fa-plus" aria-hidden="true"></i>
-                          </button>
-                      <button type="button" class="remove-input-btn btn-ingredient"><i class="fa fa-minus" aria-hidden="true"></i>
-                          </button>
+                        <!-- input boxes to add ingredients one-by-one-->
+                        <label for="ingredients">Ingredients: </label>
+                        <input type="text" class="form-control ingredients" name="ingredients"
+                            placeholder="3 peeled peppers" minlength=8 required />
+                        <input type="text" class="form-control ingredients" name="ingredient"
+                            placeholder="1/4 cup almond milk" minlength=8 required />
+                        <input type="text" class="form-control ingredients" name="ingredients"
+                            placeholder="8oz filtered water" minlength=8 required />
+                        <input type="text" class="form-control ingredients" name="ingredients"
+                            placeholder="1/2 cup grated chedder" minlength=8 required />
+                        <!--buttons to add / remove input boxes-->
+                        <button type="button" class="new-input-btn btn-ingredients"><i class="fa fa-plus"
+                                aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="remove-input-btn btn-ingredients"><i class="fa fa-minus"
+                                aria-hidden="true"></i>
+                        </button>
                     </div>
-                  </div>
+                </div>
+                <!-- Add Preparation Instructions dynamic input boxes -->
+                <div class="form-row" id="preparation-row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <!-- input boxes to add ingredients one-by-one-->
+                        <label for="preparation">Ingredients: </label>
+                        <input type="text" class="form-control preparation" name="preparation"
+                            placeholder="3 peeled peppers" minlength=8 required />
+                        <input type="text" class="form-control preparation" name="preparation"
+                            placeholder="1/4 cup almond milk" minlength=8 required />
+                        <input type="text" class="form-control preparation" name="preparation"
+                            placeholder="8oz filtered water" minlength=8 required />
+                        <input type="text" class="form-control preparation" name="preparation"
+                            placeholder="1/2 cup grated chedder" minlength=8 required />
+                        <!--buttons to add / remove input boxes-->
+                        <button type="button" class="new-input-btn btn-preparation"><i class="fa fa-plus"
+                                aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="remove-input-btn btn-preparation"><i class="fa fa-minus"
+                                aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Recipe Name -->
+                <div class="col-12">
+                    <div class="row input-group input-group-lg">
+                        <label for="created_by"></label>
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Created By</span>
+                        <input id="created_by" name="created_by" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
                 <!-- Submit Button -->
                 <div class="col-12">
                     <button href="#" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i></button>

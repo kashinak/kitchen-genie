@@ -1,29 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<section id="group-recipes" class="container">
-    <h2>{{ page_title }}</h2>
-    {% for recipe in recipes %}
-    <div class="box-container">
-        {{ recipe.recipe_name }}<br>
-        <div class="box">
-            <img src="static/img/avocado_toast.jpg" alt="">
-            <div class="info">
-                <h3>Avocado & Basil Toast</h3>
-                <p></p>
-                <a href="#"><button>view</button></a>
+    <section id="group-recipes" class="container">
+        <h2>{{ page_title }}</h2>
+        {% for recipe in recipes %}
+        <div class="box-container">
+            {{ recipe.recipe_name }}<br>
+            <div class="box">
+                <img src="static/img/avocado_toast.jpg" alt="">
+                <div class="info">
+                    <h3>Avocado & Basil Toast</h3>
+                    <p></p>
+                    <a href="#"><button>view</button></a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-    {% endfor %}  
-        {{ recipe.category_name }}<br>
-        {{ recipe.cost }}<br>
-        {{ recipe.servings }}<br>
-        {{ recipe.leftover_days }}<br>
-        {{ recipe.cook_time }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.cooking_source }}<br>
-        {{ recipe.preparation }}<br>
+    </section>
+        {% endfor %}  
+            {{ recipe.category_name }}<br>
+            {{ recipe.cost }}<br>
+            {{ recipe.servings }}<br>
+            {{ recipe.leftover_days }}<br>
+            {{ recipe.cook_time }}<br>
+            {{ recipe.ingredients }}<br>
+            {{ recipe.cooking_source }}<br>
+            {{ recipe.preparation }}<br>
 
 {% endblock %}
          
