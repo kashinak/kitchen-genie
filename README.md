@@ -146,9 +146,10 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
      - It's necessary that this app is deployed on Heroku because it runs on Python3. The Heroku toolbelt along with the CLI is used to easily deploy and maintain this Flask application.
 
-  17. [MongoDB](https://www.mongodb.com/)
+  17. [MongoDB Atlas](https://www.mongodb.com/)
 
-     - MongoDB Atlas document based database system used used for this application to ensure reliablitiy, security and ease of use. 
+     - MongoDB Atlas is used to connect Kitchen Genie application and document based database system within MongoDB using a database URL. 
+
 
   ## Testing
 
