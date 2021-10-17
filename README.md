@@ -96,42 +96,59 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   1. [Bootstrap 4.2.1:](https://getbootstrap.com/docs/4.2/getting-started/introduction/)
 
-     - Bootstrap was used to facilitate responsiveness and styling of the game site.
-  2. [Google Fonts:](https://fonts.google.com/)
+     - Bootstrap was used to facilitate responsiveness and styling of the application site.
+  2. [Start Bootstrap Clean Blog Template:](https://startbootstrap.com/theme/clean-blog)
+
+     - Bootstrap was used to facilitate responsiveness and styling of the application site, providing a simple clean design base to build upon using custom CSS.
+   
+  3. [Google Fonts:](https://fonts.google.com/)
 
      - Google fonts,'Michroma' font is used on the main game features of the project.
-  3. [Font Awesome](https://fontawesome.com/)
+  4. [Font Awesome](https://fontawesome.com/)
 
      - Font Bros, 'FishOutOfWater' font is used on the game title and results popup bolded message.
-  4. [jQuery:](https://jquery.com/)
+  5. [jQuery:](https://jquery.com/)
 
      - jQuery came with Bootstrap to make the header responsive.
-  5. [Git](https://git-scm.com/)
+  6. [Git](https://git-scm.com/)
 
      - Git was used for version control through commits to Git and pushes to Github through the Gitpod terminal.
-  6. [GitHub:](https://github.com/)
+  7. [GitHub:](https://github.com/)
 
      - GitHub was used to store the project's code after being pushed from Git.
-  7. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+  8. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
-     - Adobe Premiere Pro was used to edit whale sounds down to 1 second each and audio mix all whale sounds at the same audio level to provide consistency for the player's user experience.
-
-  8. [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/)
+     - Installed this web framework to add functionality of making CRUD calls from Flask app to MongoDB database. 
+  9. [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/)
       
-      - Installed third-party library to get Flask to communicate with Mongo.
+      - Installed this third-party library to get Flask to communicate with Mongo.
 
-  9. [Python's OS Module](https://www.pythonforbeginners.com/os/pythons-os-module)
+  10. [Python's OS Module](https://www.pythonforbeginners.com/os/pythons-os-module)
 
      - OS allows Python Flask application to set environment variables to store sensitive data and boost security.
-  10. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+  11. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
 
-     - Adobe Media Encoder was used to compress large file of animated wave into a smaller file more suitable for web playback.
-  11. [Balsamiq](https://balsamiq.com/)
+     - This dependency was necessary for Flask to run and used to securely store user credentials.
+  12. [Balsamiq](https://balsamiq.com/)
 
      - Balsamiq was used to create the [wireframes](https://github.com/kashinak/whale-song-memory-game/tree/main/assets/wireframes) during the design process.
-  12. [draw.io](https://drawio-app.com/product/)
+  13. [Pymongo](https://pypi.org/project/pymongo/)
 
-  - Draw.io was used to draw a simple flow chart to map out the order of Javascript game functionality.
+  - This package is a native Python driver for MongoDB and contains tools for interacting with MongoDB database from Python. NOTE: DO I need to list this in README.MD? It is just listed in requirements.txt but I never installed it like I did with pip3 for Flask-Pymongo. do I ned to list all the dependencies from requirements.txt in README.md? 
+  14. [Dnspython](https://www.dnspython.org/)
+
+     - This package allows for the use of the Mongo SRV connection string.
+  15. [BSON](https://en.wikipedia.org/wiki/BSON)
+
+     - This JSON like format is used by MongoDB to store data. For this application, user credentials and recipes is stored in BSON format in MongoDB document based database. In order to find documents within the MongoDB database we need to render the ObjectId.
+
+  16. [Heroku](https://www.heroku.com/)
+
+     - It's necessary that this app is deployed on Heroku because it runs on Python3. The Heroku toolbelt along with the CLI is used to easily deploy and maintain this Flask application.
+
+  17. [MongoDB](https://www.mongodb.com/)
+
+     - MongoDB Atlas document based database system used used for this application to ensure reliablitiy, security and ease of use. 
 
   ## Testing
 
