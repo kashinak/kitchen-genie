@@ -52,6 +52,10 @@ body {
   color: #c1b68c;
 }
 
+.login-button, .register-button {
+  padding-top: 20px;
+}
+
 @media only screen and (min-width: 992px) {
   .form-container {
     max-width: 720px;
