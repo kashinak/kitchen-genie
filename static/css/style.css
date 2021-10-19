@@ -1,4 +1,4 @@
-/* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant Suing HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
+/* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant using HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
 
 * {
   margin: 0;
@@ -6,7 +6,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Exo 2', sans-serif;
-  text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
@@ -324,4 +323,8 @@ div.card {
   background-color: #a94327
 }
 
-/* my code */
+/* footer */
+
+.copyright {
+  color: 
+}
