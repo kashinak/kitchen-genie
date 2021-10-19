@@ -5,7 +5,7 @@
 <div class="row">
     <form method="POST" action="{{ url_for('register') }}">
         <!-- username -->
-        <div class="mb-3">
+        <div class="mb-3 form-inputs">
             <i class="fas fa-user-plus"></i>
             <label for="username" class="form-label">Email address</label>
             <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp"
@@ -13,21 +13,23 @@
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <!-- password -->
-        <div class="mb-3">
+        <div class="mb-3 form-inputs">
             <i class="fas fa-user-lock"></i>
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" minlength="5" maxlength="30"
                 pattern="^[a-zA-Z0-9]{5,30}$" required>
         </div>
         <!-- register -->
-        <button type="submit" class="btn btn-primary">Register <i class="fas fa-sign-in-alt"></i></button>
+        <div class="d-flex justify-content-center mb-4">
+            <button type="submit" class="btn btn-primary">Register <i class="fas fa-sign-in-alt"></i></button>
+        </div>
     </form>
 </div>
 
 <div class="row">
-    <div class="col-12">
-        <p class="d-flex align-items-center">
-            Already Registered? 
+    <div class="col-12 d-flex justify-content-center mb-4">
+        <p class="d-flex align-items-center link-text">
+            Already Registered?&ensp; 
             <a href="{{ url_for('login') }}">Log In</a>
         </p>
         
