@@ -41,6 +41,22 @@ body {
   color: rgb(223 223 223);
 }
 
+/* login page - custom css */
+
+.form-inputs, .form-text, .link-text {
+  color: rgb(147 147 147)
+}
+
+@media only screen and (min-width: 992px) {
+  .form-container {
+    max-width: 720px;
+  }
+}
+
+/* register page - custom css */
+
+
+
 /* group recipes */
 /* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant Suing HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
 

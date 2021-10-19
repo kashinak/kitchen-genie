@@ -4,7 +4,7 @@
     <div class="row">
         <form method="POST" action="{{ url_for('login') }}">
             <!-- username -->
-            <div class="mb-3">
+            <div class="mb-3 form-inputs">
                 <i class="fas fa-user-cog"></i>
                 <label for="username" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp"
@@ -12,24 +12,25 @@
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <!-- password -->
-            <div class="mb-3">
+            <div class="mb-3 form-inputs">
                 <i class="fas fa-user-lock"></i>
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" minlength="5" maxlength="30"
                     pattern="^[a-zA-Z0-9]{5,30}$" required>
             </div>
             <!-- login -->
-            <button type="submit" class="btn btn-primary">Log In <i class="fas fa-sign-in-alt"></i></button>
+            <!-- added custom inline css added a div with class .justify-content-center mb-4 to center align register link -->
+            <div class="d-flex justify-content-center mb-4">
+                <button type="submit" class="btn btn-primary">Log In <i class="fas fa-sign-in-alt"></i></button>
+            </div>
         </form>
     </div>
-
+<!-- added custom inline css class .justify-content-center mb-4 to center align register link -->
     <div class="row">
-        <div class="col-12">
-            <p class="d-flex align-items-center">
-                New Here? 
-                <a href="{{ url_for('register') }}">Register Account</a>
+        <div class="col-12 d-flex justify-content-center mb-4">
+            <p class="d-flex align-items-center link-text">
+                New Here?&ensp;<a href="{{ url_for('register') }}">Register Account</a>
             </p>
-            
         </div>
     </div>
 
