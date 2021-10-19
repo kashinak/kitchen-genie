@@ -267,50 +267,16 @@ header.masthead .post-heading .meta a {
     font-size: 30px;
   }
 }
-
-.post-preview > a {
-  color: #212529;
-}
-
-.post-preview > a:focus, .post-preview > a:hover {
-  text-decoration: none;
-  color: #0085A1;
-}
-
-.post-preview > a > .post-title {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.post-preview > a > .post-subtitle {
-  font-weight: 300;
-  margin: 0 0 10px;
-}
+/* I deleted <a> tage styling since I deleted <a> tags from index.html since I am not linking to blogs pages for the first version of the app. See attched kitchen Genie bugs file for deleted code.*/
 
 .post-preview > .post-meta {
   font-size: 18px;
-  font-style: italic;
+  font-style: italic; 
   margin-top: 0;
   color: #868e96;
 }
 
-.post-preview > .post-meta > a {
-  text-decoration: none;
-  color: #212529;
-}
-
-.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
-  text-decoration: underline;
-  color: #0085A1;
-}
-
-@media only screen and (min-width: 768px) {
-  .post-preview > a > .post-title {
-    font-size: 36px;
-  }
-}
-
+/* I deleted <a> tage styling since I deleted <a> tags from index.html since I am not linking to blogs pages for the first version of the app. See attched kitchen Genie bugs file for deleted code.*/
 .floating-label-form-group {
   font-size: 14px;
   position: relative;
@@ -393,7 +359,9 @@ footer .copyright {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* custom css color - changed from bootrstrap default primary blue to blue green */
 .btn-primary {
+  color: #fff;
   background-color: #0085A1;
   border-color: #0085A1;
 }

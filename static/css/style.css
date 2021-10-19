@@ -11,6 +11,7 @@
   transition: all .2s linear;
 }
 
+
 html {
   font-size: 85%;
   scroll-behavior: smooth;
@@ -18,12 +19,26 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: #44403b;
+  background-color: #823324;
 }
 
 .flashes h4 {
   line-height: 2;
 
+}
+
+/* Home Page - custom css */
+
+.post-title {
+  color: rgb(223 223 223);
+}
+
+.post-subtitle {
+  color: rgb(147 147 147);
+}
+
+.post-meta span {
+  color: rgb(223 223 223);
 }
 
 /* group recipes */
