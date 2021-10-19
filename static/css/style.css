@@ -33,11 +33,11 @@ body {
 }
 
 .post-subtitle {
-  color: rgb(147 147 147);
+  color: #c1b68c;
 }
 
 .post-meta span {
-  color: rgb(223 223 223);
+  color: #c1b68c
 }
 
 /* About Page - custom css */
@@ -46,17 +46,26 @@ body {
   color: #c1b68c;
 }
 
-
 /* login and register pages - custom css */
 
 .form-inputs, .form-text, .link-text {
-  color: rgb(147 147 147)
+  color: #c1b68c;
 }
 
 @media only screen and (min-width: 992px) {
   .form-container {
     max-width: 720px;
   }
+}
+
+/* Contact Page */
+
+.contact-form, p {
+  color: #c1b68c;
+}
+
+.form-floating {
+    padding: 10px;
 }
 
 /* group recipes */
@@ -326,5 +335,6 @@ div.card {
 /* footer */
 
 .copyright {
-  color: 
+  padding-top: 25px;
+  color: #c1b68c;
 }
