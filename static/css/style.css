@@ -41,6 +41,13 @@ body {
   color: rgb(223 223 223);
 }
 
+/* About Page - custom css */
+
+.about-page {
+  color: #c1b68c;
+}
+
+
 /* login and register pages - custom css */
 
 .form-inputs, .form-text, .link-text {
