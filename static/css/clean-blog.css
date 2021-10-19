@@ -359,7 +359,7 @@ footer .copyright {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* custom css color - changed from bootrstrap default primary blue to blue green */
+/* custom css color - changed from bootrstrap default primary blue to blue green - BUG 4 - unable to change color of 'register' button from defaukt bootrsap primary blue color.- depsite the below custom css color change */
 .btn-primary {
   color: #fff;
   background-color: #0085A1;
