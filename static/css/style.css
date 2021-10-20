@@ -333,7 +333,79 @@ div.card {
   text-align: center;
   /* my code */
   width: 60rem;
-  background-color: #a94327
+  background-color:#c1b68c;
+  justify-content: center;
+}
+
+.recipe-description {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 50;
+}
+
+.input-group, texarea {
+  margin-bottom: 20px;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    width: 50px;
+}
+
+.how-much {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dollar-sign {
+  margin-right: 0px;
+  padding-right: 0px;
+  width: 12.75px;
+}
+
+.cost-field {
+  width: 100px;
+}
+
+@media only screen and (min-width: 992px) {
+  .recipe-card {
+    max-width: 720px;
+  }
+}
+
+div, .card {
+  text-align: left;
+}
+
+.submit-button {
+  text-align: center;
+}
+
+.add-recipe-selections {
+  max-width: 675px;
+  margin: 25px;
+}
+
+.form-row {
+  margin-left: 0px;
 }
 
 /* footer */
