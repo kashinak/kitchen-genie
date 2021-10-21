@@ -55,7 +55,7 @@
                     <span class="input-group-text">.00</span>
                 </div>
                 <!-- Selection Dropdown controls -->
-                <div class="row">
+                <div class="row dropdown-controls">
                     <!-- Category Selection -->
                     <div class="col-6 input-group mb-3 mt-3">
                         <select id="category_name" name="category_name" class="form-select validate"
@@ -129,27 +129,31 @@
                 </div>
                 <div class="row">
                     <!-- Add Ingredients dynamic input boxes -->
-                    <div class="form-row" id="ingredients-row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <!-- input boxes to add ingredients one-by-one-->
-                            <label for="ingredients">Add Ingredients </label>
-                            <input type="text" class="form-control ingredients" name="ingredients"
-                                placeholder="1/4 cup olive oil" minlength=8 required />
-                            <input type="text" class="form-control ingredients" name="ingredient"
-                                placeholder="1 large onion, chopped" minlength=8 required />
-                            <input type="text" class="form-control ingredients" name="ingredients"
-                                placeholder="5 cloves garlic, minced" minlength=8 required />
-                            <input type="text" class="form-control ingredients" name="ingredients"
-                                placeholder="1 red bell pepper, peeled, seeded, and chopped" minlength=8 required />
-                            <!--buttons to add / remove input boxes-->
-                            <button type="button" class="new-input-btn btn-ingredients"><i class="fa fa-plus"
-                                    aria-hidden="true"></i>
-                            </button>
-                            <button type="button" class="remove-input-btn btn-ingredients"><i class="fa fa-minus"
-                                    aria-hidden="true"></i>
-                            </button>
-                        </div>
+                <div class="form-row" id="ingredients-row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <!-- input boxes to add ingredients one-by-one-->
+                        <label for="ingredients">Add Ingredients </label>
+                        <input type="text" class="form-control ingredients" name="ingredients"
+                            placeholder="1/4 cup olive oil" minlength=8 required />
+                        <input type="text" class="form-control ingredients" name="ingredient"
+                            placeholder="1 large onion, chopped" minlength=8 required />
+                        <input type="text" class="form-control ingredients" name="ingredients"
+                            placeholder="5 cloves garlic, minced" minlength=8 required />
+                        <input type="text" class="form-control ingredients" name="ingredients"
+                            placeholder="1 red bell pepper, peeled, seeded, and chopped" minlength=8 required />
                     </div>
+                </div>
+                <div class="grid-container">
+                    <!--buttons to add / remove input boxes-->
+                    <div class="input-btn-1">
+                        <button type="button" class="button"><i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="input-btn-2"> <button type="button" class="button"><i class="fas fa-minus"
+                                aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
                     <!-- Add Preparation Instructions dynamic input boxes -->
                     <div class="form-row mt-3" id="preparation-row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
