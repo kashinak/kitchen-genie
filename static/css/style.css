@@ -421,12 +421,18 @@ div, .card {
 }
 
 .grid-container {
-  margin-top: 10px;
-  grid-column-gap: 10px;
   display: grid;
   grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  width: 50px;
 }
 
+.grid-container > div {
+  text-align: center;
+  padding: 5px 0;
+  margin-left: 4px;
+  margin-top: 4px;
+}
 /* footer */
 
 .copyright {

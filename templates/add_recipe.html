@@ -154,26 +154,28 @@
                         </button>
                     </div>
                 </div>
-                    <!-- Add Preparation Instructions dynamic input boxes -->
+                <!-- Add Preparation Instructions dynamic input boxes -->
                     <div class="form-row mt-3" id="preparation-row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <!-- input boxes to add ingredients one-by-one-->
                             <label for="preparation">Add Preparation Steps</label>
                             <input type="text" class="form-control preparation" name="preparation"
-                                placeholder="In pressure cooker on sauté setting, heat the olive oil over medium-high heat" minlength=8 required />
+                                placeholder="In pressure cooker on sauté setting, heat the olive oil over medium-high heat"
+                                minlength=8 required />
                             <input type="text" class="form-control preparation" name="preparation"
                                 placeholder="Sauté onions, garlic, and peppers 5-7 minutes" minlength=8 required />
                             <input type="text" class="form-control preparation" name="preparation"
-                                placeholder="Add beans, lentils, tomatoes, broth, spices and stir well to combine" minlength=8 required />
+                                placeholder="Add beans, lentils, tomatoes, broth, spices and stir well to combine"
+                                minlength=8 required />
                             <input type="text" class="form-control preparation" name="preparation"
                                 placeholder="Cook on high pressure for 10 minutes" minlength=8 required />
                             <!--buttons to add / remove input boxes-->
-                            <button type="button" class="new-input-btn btn-preparation"><i class="fa fa-plus"
-                                    aria-hidden="true"></i>
-                            </button>
-                            <button type="button" class="remove-input-btn btn-preparation"><i class="fa fa-minus"
-                                    aria-hidden="true"></i>
-                            </button>
+                            <div class="grid-container">
+                                <button type="button" class="button"><i class="fas fa-plus" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="button"><i class="fas fa-minus" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
