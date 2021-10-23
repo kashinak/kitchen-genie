@@ -415,9 +415,9 @@ div, .card {
   border-radius: 4px;
 }
 
-.button:hover {
-  background-color: #4CAF50; /* Green */
-  color: white;
+.btn-outline-secondary {
+  color: rgb(0 0 0 / 80%);
+  border-color: #6c757d;
 }
 
 .grid-container {
