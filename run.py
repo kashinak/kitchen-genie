@@ -7,14 +7,21 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-
-
+ 
+# code from Roy Tutorials 'Upload and display image using 
+# Python Flask' https://roytuts.com/upload-and-display-image-using-python-flask/
+UPLOAD_FOLDER = 'static/uploads/'
+# end code from Roy Tutorials
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-
+# code from Roy Tutorials 'Upload and display image using 
+# Python Flask' https://roytuts.com/upload-and-display-image-using-python-flask/
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+# end code from Roy Tutorials
 mongo = PyMongo(app)
 
 
@@ -180,6 +187,36 @@ def single_recipe():
         servings=servings, leftovers=leftovers, 
         prep_times=prep_times, cook_times=cook_times, tools=tools)
 
+@app.route("/your_recipes")
+def your_recipes():
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "description": request.form.get("description"),
+            "category_name": request.form.get("category_name"),
+            "cost": request.form.get("cost"),
+            "serving_size": request.form.get("serving_size"),
+            "leftover_days": request.form.get("leftover_days"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "tools": request.form.getlist("tools"),
+            "ingredients": request.form.getlist("ingredients"),
+            "preparation": request.form.getlist("preparation"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(recipe)
+        flash("Task Successfully Added")
+        return redirect(url_for("your_recipes"))
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    servings = mongo.db.servings.find().sort("serving_size", 1)
+    leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
+    prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
+    cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
+    tools = mongo.db.tools.find().sort("tools", 1)
+    return render_template(
+        "your_recipes.html", categories=categories, 
+        servings=servings, leftovers=leftovers, 
+        prep_times=prep_times, cook_times=cook_times, tools=tools)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
