@@ -34,35 +34,26 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   ## Design
 
-  The game is designed to be fun and light-hearted to help engage the player in learning. The following design choices were made with this in mind:
+  This application has a modern design with subtle splashes of warm fall colors. The site's design simplicity is distraction free, allowing an ease-of-use user experience and promote cheerful social interaction between friends. The following design choices were made with this in mind:
 
   - ### Fonts
 
 
-    - The primary font [&#39;FishOutOfWater&#39;](https://www.fontbros.com/families/fish-out-of-water) by [Font Bros](https://www.fontbros.com/) was chosen for the game title and results popup text message because it has a fun cartoon-like water quality to create an alternate game reality representation of whale's natural habitat.
-    - The secondary font [&#39;Michroma&#39;](https://fonts.google.com/?query=michroma) by [Google Fonts](https://fonts.google.com/) was chosen for the game controls, score board and game instructions because of its digital, futuristic quality to represent the digital game environment.
+    - The primary font [&#39;Open Sans&#39;](https://fonts.google.com/specimen/Open+Sans#standard-styles) by [Google Fonts](https://fonts.google.com/) was chosen for the main title, subtitle, testimonial posts, and large login/register buttons for it's neutral, friendly, and simple design.
+    - The secondary font [&#39;generic Sans-serif&#39;](https://fonts.google.com/?category=Sans+Serif) by [Google Fonts](https://fonts.google.com/) was chosen for the menu buttons, 'about' text, testimonial post dates and names, and login, register and add recipe input field description text because of its wide availability in all browsers and simple design complementing the primary 'Open Sans' font.
+
   - ### Colors
 
+    - The primary colors are a deep tomatoe red for the background theme color and a gentle gold for the add recipe card. In contrast to the soft red and gold, the primary submit user data buttons are in default bootstrap primary blue color to make it a no brainer for the user to submit their data and to allow the user to jump into using the app as quick as possible. 
 
-    - The primary colors are calm ocean colors of light blue, medium and dark blue. In contrast to the ocean blues, the game action color is yellow orange. It highlights the game tiles when in use and outlines the 'start game' button. This bright color is used to guide the player to take action and play the game.
   - ### Styling
 
-
     - A cute cartoon whale is used as a graphic in the game results popup to make it fun for the player regardless of winning or losing the game.
+
   - ### Backgrounds
 
+    - The background color was color matched to the deep red color of the tomatoes in the main header photo of warm muted colors of a country French style food serving tray surrounded by popular savory cooking staples of ripe tomatoes, spicy peppers and savory yellow beans. The warm gold and red colors help create a friendly inviting user experience filled with a warm color palette to help increase the user's appetite. 
 
-    - An animated ocean wave background provides an aquatic backdrop for the main game area and for the game results popup message.
-  - ### Card images
-
-
-    - Real photos were chosen for the primary game buttons, to represent individual whale species living in their real life natural environment. This documentary feel of the game is to encourage game players to continue their education of whale song beyond the game.
-  - ### Audio files
-
-
-    - Real audio recordings of whale songs were chosen to facilitate the learning experience discovering the nuanced differences of whale song between various whale species. They have been edited down to 1 second each so the game experience is fluid and rythmic.
-    - An uplifting chime sound effect is heard with a popup game results message to celebrate the player winning the game!
-    - A down-trodden chime sound effect plays with a losing popup message to alert the player that they lost the game.
   - ### Wireframes
 
     These wireframes were created using [Balsamiq](https://balsamiq.com/) to facilitate a mobile first responsive game site design. The game design evolved beyond the wireframes during testing phase explained below in the 'Testing' section.
@@ -306,8 +297,9 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - #### Fonts
 
-  1. [&#39;FishOutOfWater&#39;, Font Bros](https://www.fontbros.com/families/fish-out-of-water): [Standard Web Font License](https://www.fontbros.com/families/fish-out-of-water), [Harold&#39;s Fonts](https://www.fontbros.com/foundries/harolds-fonts#)
-  2. [&#39;Michroma&#39;, Google Fonts](https://fonts.google.com/?query=michroma): [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL), [Vernon Adams](https://sansoxygen.com/)
+  1. [&#39;Open Sans&#39;, Google Fonts](https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&query=open+sans#standard-styles): [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0), [Steve Matteson](https://mattesontypographics.com/)
+
+  2. [&#39;generic Sans-serif&#39;, Google Fonts](https://fonts.google.com/?category=Sans+Serif): [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 
   - #### Animation
 
