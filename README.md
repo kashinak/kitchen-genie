@@ -61,7 +61,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
     A flow chart was drawn to map out Javascript order of functionality.
 
 
-    - Mobile Wire Frame - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_mobile_wireframes2.pdf)
+    - Mobile Wire Frame - [View](https://github.com/kashinak/kitchen-genie/blob/main/static/wireframes/Kitchen_Genie_Mobile_wireframes.pdf)
     - Tablet Wire Frame - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_tablet_wireframes2.pdf)
     - Desktop Wire Frame - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_desktop_wireframes.pdf)
     - Flow Chart - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_flowchart.png)
