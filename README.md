@@ -274,39 +274,30 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   ### Code
 
-  - [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-  - [W3 Schools - &#39;How To - Full Screen Video&#39;](https://www.w3schools.com/howto/howto_css_fullscreen_video.asp)
-  - [Jack on Stack Overflow - &#39;HTML inside Twitter Bootstrap Popover&#39;](https://stackoverflow.com/questions/13202762/html-inside-twitter-bootstrap-popover) and [JSFiddle](http://jsfiddle.net/z824fn6b/) for code snippet on button popover.
-  - [Web Dev Junkie](https://www.youtube.com/channel/UCsrVDPJBYeXItETFHG0qzyw) for his code snippet on creating a JavaScript promise which was key for this game's functionality. This is his YouTube tutorial [Live Coding a Simon Game: HTML, CSS&lt; Javascript](https://youtu.be/W0MxUHlZo6U)
-  - Aarthi Elumalai, founder of [DigiFisk](https://digifisk.com/) for her JavaScript code models from her Udemy tutorial on building a game results popup: [2D Game Development W/ Javascript &amp; CSS3-Create Memory Game](https://www.udemy.com/course/2d-game-development-javascript-css3-create-memory-game/)
-  - [Beau Carnes](https://www.freecodecamp.org/news/author/beau/), for his comprehensive code snippet models [freeCodeCamp](https://www.freecodecamp.org/) tutorial: [Simon Game JavaScript Tutorial for Beginners](https://youtu.be/n_ec3eowFLQ)
+  - [Code Institute - Flask ](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System. also used Bootstrap to build basis of input fields and menu dropdown options for user input sections: login, register and add recipes sections. 
+  - [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System. also used Bootstrap to build basis of input fields and menu dropdown options for user input sections: login, register and add recipes sections. 
+  - [Copyright 2013-2021 Start Bootstrap LLC - &#39;Clean-Blog template&#39;](https://startbootstrap.com/theme/clean-blog) [Code released under the MIT license](https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE): used the Start Bootstrap template to facilitate a simple setup of a clean header and footer for all pages of the app and a collapsible menu bar shown in mobile viewports. 
+  - [Copyright 2013-2021 Start Bootstrap LLC - &#39;SB Forms Contact Forms&#39;](https://startbootstrap.com/solution/contact-forms): Code was used for the user contact form for the contact.html page. 
+  - [Mr. Web Developer - &#39;Complete Responsive Food/Restaurant using HTML/CSS/JQuery/Bootstrap - Step By Step&#39;](https://www.youtube.com/watch?v=ajtLKcOF7RM): Code was used as a basis to develop group_recipes.html page and css styles to create individual responsive clickable food cards for each recipe for all users of the site. 
+  - [Coding Addict and freecodecamp.org - &#39;HTML & CSS Project Tutorial - Build a Recipes Website&#39;](https://www.youtube.com/watch?v=-8LTPIJBGwQ): Code was used to facilitate development of the single_recipe.html page for this app.
+  - [&#39;Box Shadow styles&#39 W3schools tutorial](https://www.w3schools.com/css/css3_shadows_box.asp): used code to guide development of a beautiful box shadow surrounding the card background for the user input fields and drop down menus for the add_recipe.html page.
+
 
   ### Content
 
-  - All content was written by Kashina Kessler but some code snippets may be very similar and partially identical to code snippets, mentioned above under the 'Credits: Code' section. The developer has added comments to JS CSS and HTML adding credit and links to these particular code snippets. All code was customized by the developer to create a brand new game product.
+  - All content was written by the web developer, Kashina Kessler but some code snippets may be very similar and partially identical to code snippets, mentioned above under the 'Credits: Code' section. The developer has added comments to JS CSS and HTML adding credit and links to these particular code snippets. All code was customized by the developer to create a new application.
 
   ### Media
 
   - #### Photos
 
-  1. [Beluga Photo](https://commons.wikimedia.org/wiki/File:Beluga_premier.gov.ru-2.jpeg): [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/deed.en), [Premier.gov.ru](https://premier.gov.ru/events/)
-  2. [Orca Photo](https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg): Public Domain, Robert Pittman, [NOAA](https://apps-afsc.fisheries.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm)
-  3. [North Atlantic Right Whale Photo](https://commons.wikimedia.org/wiki/File:Right_Whale_%22Scoop%22_(42853281122).jpg): Public Domain, [NOAA](https://apps-afsc.fisheries.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm)
-  4. [Sperm Whale Photo](https://commons.wikimedia.org/wiki/File:0b4a8510_by_vitaly_sokol-dbw14sol.jpg): [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/deed.en), [Will Falcon aka Vitaly Sokai](https://commons.wikimedia.org/w/index.php?title=Will_Falcon&action=edit&redlink=1)
+  1. [Vegetables and Wooden Food Tray](https://elements.envato.com/different-vegetables-on-wooden-background-PHTVFJE): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
 
   - #### Fonts
 
   1. [&#39;Open Sans&#39;, Google Fonts](https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&query=open+sans#standard-styles): [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0), [Steve Matteson](https://mattesontypographics.com/)
 
   2. [&#39;generic Sans-serif&#39;, Google Fonts](https://fonts.google.com/?category=Sans+Serif): [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-
-  - #### Animation
-
-  1. [animated ocean game area and popup background](https://elements.envato.com/animated-wave-seascape-under-stay-night-sky-backgr-2XS6G2J): [Commerical License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/animated-wave-seascape-under-stay-night-sky-backgr-2XS6G2J)
-
-  - #### Graphics
-
-  1. [game results popup whale icon:](https://elements.envato.com/cute-whale-sea-animals-characters-vol-6-LUYKUNU), [Commerical License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/cute-whale-sea-animals-characters-vol-6-LUYKUNU)
 
   ### Acknowledgements
 
