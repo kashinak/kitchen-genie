@@ -44,11 +44,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - ### Colors
 
-    - The primary colors are a deep tomatoe red for the background theme color and a gentle gold for the add recipe card. In contrast to the soft red and gold, the primary submit user data buttons are in default bootstrap primary blue color to make it a no brainer for the user to submit their data and to allow the user to jump into using the app as quick as possible. 
-
-  - ### Styling
-
-    - A cute cartoon whale is used as a graphic in the game results popup to make it fun for the player regardless of winning or losing the game.
+    - The primary colors are a deep tomatoe red for the background theme color and a gentle gold for the add recipe card. In contrast to the soft red and gold, the primary submit user data buttons are in default bootstrap primary blue color to make it a no brainer for the user to submit their data and to allow the user to jump into using the app as quick as possible.
 
   - ### Backgrounds
 
@@ -56,15 +52,11 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - ### Wireframes
 
-    These wireframes were created using [Balsamiq](https://balsamiq.com/) to facilitate a mobile first responsive game site design. The game design evolved beyond the wireframes during testing phase explained below in the 'Testing' section.
-
-    A flow chart was drawn to map out Javascript order of functionality.
-
+    These wireframes were created using [Balsamiq](https://balsamiq.com/) to facilitate a mobile first responsive site design. There are some features in the wireframes that were not included in this first version and are noted in the 'Addtional Features" section within the readme. 
 
     - Mobile Wire Frame - [View](https://github.com/kashinak/kitchen-genie/blob/main/static/wireframes/Kitchen_Genie_Mobile_wireframes.pdf)
-    - Tablet Wire Frame - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_tablet_wireframes2.pdf)
-    - Desktop Wire Frame - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_desktop_wireframes.pdf)
-    - Flow Chart - [View](https://github.com/kashinak/whale-song-memory-game/blob/main/assets/wireframes/whalesong_flowchart.png)
+    - Tablet Wire Frame - [View](https://github.com/kashinak/kitchen-genie/blob/main/static/wireframes/Kitchen_Genie_Tablet_Wireframes.pdf)
+    - Desktop Wire Frame - [View](https://github.com/kashinak/kitchen-genie/blob/main/static/wireframes/Kitchen_Genie_Desktop_Wireframes.pdf)
 
   ## Features
 
@@ -225,18 +217,19 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   ## Deployment
 
-  ### GitHub Pages
+  ### Heroku Deployment
 
-  The project was deployed to GitHub Pages using the following steps...
+  The project was deployed to Heroku using the following steps...
 
-  1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-  2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-  3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-  4. Under "Source", click the dropdown called "None" and select "Master Branch".
-  5. The page will automatically refresh.
-  6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
-
+  1. Log in to [GitPodRepository](https://gitpod.com/)
+  2. Within oyur repository, create a requirements.txt file using the terminal command pip freeze > requirements.txt.
+  3. Create a Procfile with the terminal command echo web: python app.py > Procfile.
+  4. git add and git commit the new requirements and Procfile and then git push the project to GitHub.
+  5. Create a new app on the [Heroku website](https://www.heroku.com/) by clicking the "New" button in your dashboard. Give it a name and set the region that corresponds to your location.
+  6. From the Heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+  7. Confirm the linking of the Heroku app to the correct GitHub repository.
+  8. In the Heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+  9. Set the following config vars:
   ### Forking the GitHub Repository
 
   By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
