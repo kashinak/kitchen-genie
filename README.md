@@ -230,6 +230,12 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   7. Confirm the linking of the Heroku app to the correct GitHub repository.
   8. In the Heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
   9. Set the following config vars:
+  ![heroku_config_vars](https://user-images.githubusercontent.com/61304684/138800234-f5f46a0e-b878-49c1-a3d6-983d178ac87c.png)
+  10. To get you MONGO_URI read the MongoDB Atlas documentation [here](https://docs.mongodb.com/manual/reference/connection-string/#std-label-mongodb-uri)
+  11. In Heroku dashboard, click "Deploy"
+  12. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
+  13. The site is now successfully deployed.
+  
   ### Forking the GitHub Repository
 
   By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
