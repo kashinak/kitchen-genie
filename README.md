@@ -38,7 +38,6 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - ### Fonts
 
-
     - The primary font [&#39;Open Sans&#39;](https://fonts.google.com/specimen/Open+Sans#standard-styles) by [Google Fonts](https://fonts.google.com/) was chosen for the main title, subtitle, testimonial posts, and large login/register buttons for it's neutral, friendly, and simple design.
     - The secondary font [&#39;generic Sans-serif&#39;](https://fonts.google.com/?category=Sans+Serif) by [Google Fonts](https://fonts.google.com/) was chosen for the menu buttons, 'about' text, testimonial post dates and names, and login, register and add recipe input field description text because of its wide availability in all browsers and simple design complementing the primary 'Open Sans' font.
 
@@ -82,14 +81,14 @@ Kitchen Genie is an online tool, bringing friends together to support each other
      - Bootstrap was used to facilitate responsiveness and styling of the application site.
   2. [Start Bootstrap Clean Blog Template:](https://startbootstrap.com/theme/clean-blog)
 
-     - Bootstrap was used to facilitate responsiveness and styling of the application site, providing a simple clean design base to build upon using custom CSS.
+     - This open source library of free Bootstrap templates and themes; facilitated a mobile first responsive design base. The 'clean-blog' template provided a clean simplistic modern design, free from distractions. It provided a good header footer foundation; perfect for applying Flask Jinja templates for all pages of the application. Custom CSS, HTML and Python were later applied to this template; converting a blog site into a cooking recipe site. 
    
   3. [Google Fonts:](https://fonts.google.com/)
 
-     - Google fonts,'Michroma' font is used on the main game features of the project.
+     - Google fonts,'Open Sans' and generic 'Sans-serif' fonts were used on the home page title, subtitle, buttons, input field description text, user testimonials, menu items and content description text.
   4. [Font Awesome](https://fontawesome.com/)
 
-     - Font Bros, 'FishOutOfWater' font is used on the game title and results popup bolded message.
+     - Font Awesome plus symbol 'fas fa-plus' and minus symbol 'fas fa-minus' were used to design buttons that add and delete user input field within the add_recipe.html page. Icon 'fas fa-plus-square' was used for the submit button for all the user inout for add_recipe.html page. Icons for social media links.
   5. [jQuery:](https://jquery.com/)
 
      - jQuery came with Bootstrap to make the header responsive.
@@ -133,6 +132,17 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
      - MongoDB Atlas is used to connect Kitchen Genie application and document based database system within MongoDB using a database URL. 
 
+  18. [SASS](https://en.wikipedia.org/wiki/Sass_%28stylesheet_language%29)
+
+     - SASS files included in Start Bootstrap 'clean blog' template for deeper customization options.
+  19. [SCSS](https://w3codemasters.in/how-to-use-scss-in-html/)
+
+     - SCSS files included in Start Bootstrap 'clean blog' template for deeper customization options.
+  20. [SB Forms](https://startbootstrap.com/solution/contact-forms)
+
+     - SB Forms included in Start Bootstrap 'clean blog' template for easy form setup with the option to add API link 
+     to the form which will send all contact messages to Kitchen Genie's central email address. 
+   
 
   ## Testing
 
@@ -274,7 +284,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   ### Code
 
-  - [Code Institute - Flask ](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System. also used Bootstrap to build basis of input fields and menu dropdown options for user input sections: login, register and add recipes sections. 
+  - [Code Institute - &#39;Backend Development | Mini Project | Putting It All Together&#39;](https://codeinstitute.net/): Used Python Flask code from this excellent Code Institute tutorial on building a Flask Task application in Python.
   - [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System. also used Bootstrap to build basis of input fields and menu dropdown options for user input sections: login, register and add recipes sections. 
   - [Copyright 2013-2021 Start Bootstrap LLC - &#39;Clean-Blog template&#39;](https://startbootstrap.com/theme/clean-blog) [Code released under the MIT license](https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE): used the Start Bootstrap template to facilitate a simple setup of a clean header and footer for all pages of the app and a collapsible menu bar shown in mobile viewports. 
   - [Copyright 2013-2021 Start Bootstrap LLC - &#39;SB Forms Contact Forms&#39;](https://startbootstrap.com/solution/contact-forms): Code was used for the user contact form for the contact.html page. 
@@ -303,6 +313,4 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - My Mentor, [Moosa Hassan](https://moosahassanx.github.io/Personal-Website/) for his dedication and time for helpful project feedback.
   - [Code Institute](https://codeinstitute.net/) for their support and education.
-  - [Ayooluwa Isaiah](https://freshman.tech/about/), for his informative blog: [How to build a Simon Game with JavaScript](https://freshman.tech/simon-game/)
-  - [Wojciech Katuzny](https://mrkaluzny.medium.com/), blog: [Creating Simon Game in Javascript](https://medium.com/front-end-weekly/create-simon-game-in-javascript-d53b474a7416)
-  - [Happy Coder](https://www.youtube.com/channel/UCLG_lIjyLPqjN-KtHK_aE-Q), for her YouTube explainer video: [Building a Simon Game web app using javascript and jQuery](https://youtu.be/4pfvy_A5ceE)
+ 
