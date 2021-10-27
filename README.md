@@ -81,7 +81,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
      - Bootstrap was used to facilitate responsiveness and styling of the application site.
   2. [Start Bootstrap Clean Blog Template:](https://startbootstrap.com/theme/clean-blog)
 
-     - This open source library of free Bootstrap templates and themes; facilitated a mobile first responsive design base. The 'clean-blog' template provided a clean simplistic modern design, free from distractions. It provided a good header footer foundation; perfect for applying Flask Jinja templates for all pages of the application. Custom CSS, HTML and Python were later applied to this template; converting a blog site into a cooking recipe site. 
+     - This open source library of free Bootstrap templates and themes; facilitated a mobile first responsive design base. The 'clean-blog' template provided a simplistic modern design. It provided a clean header footer foundation; perfect for applying Flask Jinja templates for all pages of the application. Custom CSS, HTML and Python were later applied to this template; converting a blog site into a cooking recipe site. 
    
   3. [Google Fonts:](https://fonts.google.com/)
 
@@ -290,7 +290,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   - [Copyright 2013-2021 Start Bootstrap LLC - &#39;SB Forms Contact Forms&#39;](https://startbootstrap.com/solution/contact-forms): Code was used for the user contact form for the contact.html page. 
   - [Mr. Web Developer - &#39;Complete Responsive Food/Restaurant using HTML/CSS/JQuery/Bootstrap - Step By Step&#39;](https://www.youtube.com/watch?v=ajtLKcOF7RM): Code was used as a basis to develop group_recipes.html page and css styles to create individual responsive clickable food cards for each recipe for all users of the site. 
   - [Coding Addict and freecodecamp.org - &#39;HTML & CSS Project Tutorial - Build a Recipes Website&#39;](https://www.youtube.com/watch?v=-8LTPIJBGwQ): Code was used to facilitate development of the single_recipe.html page for this app.
-  - [&#39;Box Shadow styles&#39 W3schools tutorial](https://www.w3schools.com/css/css3_shadows_box.asp): used code to guide development of a beautiful box shadow surrounding the card background for the user input fields and drop down menus for the add_recipe.html page.
+  - [&#39;Box Shadow Styles&#39; W3schools tutorial](https://www.w3schools.com/css/css3_shadows_box.asp): used code to guide development of a beautiful box shadow surrounding the card background for the user input fields and drop down menus for the add_recipe.html page.
 
 
   ### Content
@@ -301,7 +301,29 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - #### Photos
 
-  1. [Vegetables and Wooden Food Tray](https://elements.envato.com/different-vegetables-on-wooden-background-PHTVFJE): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+  1. [Pepper and Tomatoes surrounding Wooden Food Tray](https://elements.envato.com/different-vegetables-on-wooden-background-PHTVFJE): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  2. [Plums](https://elements.envato.com/concept-of-tasty-food-with-plums-on-a-wooden-table-64U3W5F): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  3. [Tomatoes in Jar](https://elements.envato.com/food-R37NRBG): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  4. [Lasagna](https://elements.envato.com/food-844L2PT): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  5. [Vegetables on Wooden Background](https://elements.envato.com/food-538D26T): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  6. [Italian Food Ingredients](https://elements.envato.com/italian-food-background-with-food-3RJR57Z): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  7. [Meat Soup](https://elements.envato.com/food-W3HT2BH): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  8. [Ravioli](https://elements.envato.com/food-JFNDSY9): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  9. [Pan Pizza](https://elements.envato.com/food-ZFT9QMS): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  10. [Vegetarian Chili](https://elements.envato.com/vegetarian-chili-with-cilantro-PM2TWL4): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  11. [Russian Cabbage Soup](https://elements.envato.com/traditional-russian-soup-with-cabbage-sauerkraut-s-9CHD24Us): [Commercial License](https://elements.envato.com/license-terms), [Envato Elements](https://elements.envato.com/)
+
+  12. [Avocado Toast](https://www.pexels.com/photo/basil-leaves-and-avocado-on-sliced-bread-on-white-ceramic-plate-1351238/): [Free stock Photo License](https://www.pexels.com/license/), Photo by [Lisa](https://www.pexels.com/@fotios-photos?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/basil-leaves-and-avocado-on-sliced-bread-on-white-ceramic-plate-1351238/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
   - #### Fonts
 
