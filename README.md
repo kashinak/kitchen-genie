@@ -71,7 +71,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   - [CSS3](https://en.wikipedia.org/wiki/CSS)
   - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
   - [Python3](https://en.wikipedia.org/wiki/Python_%28programming_language%29)
-  - [Jinja Template](https://en.wikipedia.org/wiki/Jinja_%28template_engine%29)
+  - [Jinja Template Language](https://en.wikipedia.org/wiki/Jinja_%28template_engine%29)
   
 
   ### Frameworks, Libraries & Programs Used
@@ -114,7 +114,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   12. [Balsamiq](https://balsamiq.com/)
 
      - Balsamiq was used to create the [wireframes](https://github.com/kashinak/whale-song-memory-game/tree/main/assets/wireframes) during the design process.
-  13. [Pymongo](https://pypi.org/project/pymongo/)
+  13. [PyMongo](https://pypi.org/project/pymongo/)
 
   - This package is a native Python driver for MongoDB and contains tools for interacting with MongoDB database from Python. NOTE: DO I need to list this in README.MD? It is just listed in requirements.txt but I never installed it like I did with pip3 for Flask-Pymongo. do I ned to list all the dependencies from requirements.txt in README.md? 
   14. [Dnspython](https://www.dnspython.org/)
