@@ -22,7 +22,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   Kitchen Genie is a great way for the First Time User to meet their user goals because:
 
-  1. The application was designed with the user experience as central importance as mobile first design, before writing code.
+  1. The application used Bootstrap front-end framework to provide an intuitive design with the user experience as central importance, creating a mobile first design.
   2. The home page provides proof that the application works, displaying user testimonials regarding what they were able to do with the money they saved using Kitchen Genie. 
   3. The user profile page has a personal financial goal option to fill out, to incentivize the User to regular use Kitchen Genie.
   4. The user can tally up food savings cost after reaching their finincial food savings goal then post a testimonial to the site to encourage their comunnity of thrifty friends.
@@ -59,6 +59,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   ## Features
 
+  - Basic CRUD mechanisms and MongoDB database access functionality
   - Responsive on all device sizes
   - Interactive elements
 
