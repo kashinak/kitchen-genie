@@ -61,6 +61,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - Basic CRUD mechanisms and MongoDB database access functionality
   - Responsive on all device sizes
+  - Mobile collapsible navigation bar button
   - Visually Appealing interactive elements
   - Flash messages to alert the user that their input data is successful such as when they register, log in, log out and add recipes.
   - Flash messages to alert the user that their input data is unsuccessful such as when a user name or passwrod does not exist. 
