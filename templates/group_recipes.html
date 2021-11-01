@@ -4,11 +4,10 @@
         <h2>{{ page_title }}</h2>
         {% for recipe in recipes %}
         <div class="box-container">
-            {{ recipe.recipe_name }}<br>
             <div class="box">
                 <img src="static/img/avocado_toast.jpg" alt="">
                 <div class="info">
-                    <h3>Avocado & Basil Toast</h3>
+                    <h3>{{ recipe.recipe_name }}</h3>
                     <p></p>
                     <a href="#"><button>view</button></a>
                 </div>

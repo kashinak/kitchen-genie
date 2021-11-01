@@ -129,63 +129,32 @@
                 </div>
                 <div class="row">
                     <!-- Add Ingredients dynamic input boxes -->
-                    <div class="form-row" id="ingredients-row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <!-- input boxes to add ingredients one-by-one-->
-                            <label for="ingredients">Add Ingredients </label>
-                            <input type="text" class="form-control ingredients" name="ingredients"
-                                placeholder="1/4 cup olive oil" minlength=8 required />
-                            <input type="text" class="form-control ingredients" name="ingredient"
-                                placeholder="1 large onion, chopped" minlength=8 required />
-                            <input type="text" class="form-control ingredients" name="ingredients"
-                                placeholder="5 cloves garlic, minced" minlength=8 required />
-                            <input type="text" class="form-control ingredients" name="ingredients"
-                                placeholder="1 red bell pepper, peeled, seeded, and chopped" minlength=8 required />
-                        </div>
-                    </div>
-                    <div class="grid-container">
+                    <div class="col-12" id="ingredient-list">
+                        <!-- input boxes to add ingredients one-by-one-->
+                        <label for="ingredients">Add Ingredients </label>
+                        <input type="text" id="ingredient" class="form-control ingredients" name="ingredients"
+                            placeholder="1/4 cup olive oil" required />
                         <!--buttons to add / remove input boxes-->
-                        <div class="input-btn-1">
-                            <button type="button" class="button"><i class="btn-outline-secondary fas fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="input-btn-2">
-                            <button type="button" class="button"><i class="btn-outline-secondary fas fa-minus"
-                                    aria-hidden="true"></i>
-                            </button>
-                        </div>
+                        <button type="button" id="btn-add-ingredient" class="button btn-input"><i class="btn-outline-secondary fas fa-plus"></i>
+                        </button>
+                        <button type="button" id="btn-remove-ingredient" class="button btn-input"><i
+                                class="btn-outline-secondary fas fa-minus" aria-hidden="true"></i>
+                        </button>
                     </div>
                     <!-- Add Preparation Instructions dynamic input boxes -->
-                <div class="form-row mt-3" id="preparation-row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                        <!-- input boxes to add ingredients one-by-one-->
+                    <div class="col-12 mt-3" id="preparation-list">
+                        <!-- input boxes to add preparation steps one-by-one-->
                         <label for="preparation">Add Preparation Steps</label>
                         <input type="text" class="form-control preparation" name="preparation"
-                            placeholder="In pressure cooker on sauté setting, heat the olive oil over medium-high heat"
-                            minlength=8 required />
-                        <input type="text" class="form-control preparation" name="preparation"
-                            placeholder="Sauté onions, garlic, and peppers 5-7 minutes" minlength=8 required />
-                        <input type="text" class="form-control preparation" name="preparation"
-                            placeholder="Add beans, lentils, tomatoes, broth, spices and stir well to combine"
-                            minlength=8 required />
-                        <input type="text" class="form-control preparation" name="preparation"
-                            placeholder="Cook on high pressure for 10 minutes" minlength=8 required />
+                            placeholder="Sauté onions, garlic, and peppers 5-7 minutes" required />
                         <!--buttons to add / remove input boxes-->
+                        <button type="button" id="btn-add-preparation" class="button btn-input"><i
+                                class="btn-outline-secondary fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" id="btn-remove-preparation" class="button btn-input"><i
+                                class="btn-outline-secondary fas fa-minus" aria-hidden="true"></i>
+                        </button>
                     </div>
-                    <div class="grid-container">
-                        <div class="input-btn-1">
-                            <button type="button" class="button"><i class="btn-outline-secondary fas fa-plus"
-                                    aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <div class="input btn-2">
-                            <button type="button" class="button"><i class="btn-outline-secondary fas fa-minus"
-                                    aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <!-- Created By-->
                     <div class="col-12 mt-3">
                         <div class="mb-3">

@@ -1,14 +1,22 @@
-
 $(document).ready(function() {
-    
-    /* Dynamically add new ingredient input field in recipe forms*/
-    $(".new-input-btn").on("click", function() {
-        $('<input type="text" class="form-control ingredient" name="ingredient" id="ingredient" placeholder="20g plain flour sieved" required >').insertBefore(".new-input-btn");
+    /* Add new ingredient in add recipe form */
+    $("#btn-add-ingredient").on("click", function() {
+        $('<input type="text" id="ingredient" class="form-control ingredients" name="ingredients" placeholder="1/4 cup olive oil" required />').insertBefore("#btn-add-ingredient");
     });
-    
-    /*removes last input element in ingredient list*/
-    $(".remove-input-btn").on("click", function() {
-        $("#ingredients-row input:last").remove();
+
+    /* Remove ingredient in add recipe form */
+    $('#btn-remove-ingredient').on('click', function () {
+        $("#ingredient-list input:last").remove();
     });
-   
+
+    /* Add new cooking preparation step in add recipe form */
+    $("#btn-add-preparation").on("click", function() {
+        $('<input type="text" class="form-control preparation" name="preparation" placeholder="Sauté onions, garlic, and peppers 5-7 minutes" required />').insertBefore("#btn-add-preparation");
+    });
+
+    /* Remove cooking recipe step in add recipe form */
+    $('#btn-remove-preparation').on('click', function () {
+        $("#preparation-list input:last").remove();
+      });
+     
 });

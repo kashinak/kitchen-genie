@@ -405,14 +405,14 @@ div, .card {
   margin: 25px;
 }
 
-.form-row {
-  margin-left: 0px;
-}
-
 .button {
   transition-duration: 0.4s;
   width: 50px;
   border-radius: 4px;
+}
+
+.btn-input {
+  margin-top: 10px;
 }
 
 .btn-outline-secondary {
