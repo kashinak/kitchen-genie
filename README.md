@@ -61,9 +61,10 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   - Basic CRUD mechanisms and MongoDB database access functionality
   - Responsive on all device sizes
-  - Interactive elements
+  - Visually Appealing interactive elements
   - Flash messages to alert the user that their input data is successful such as when they register, log in, log out and add recipes.
   - Flash messages to alert the user that their input data is unsuccessful such as when a user name or passwrod does not exist. 
+  - Dropdown menus to speed up and facilitate user data input experience. 
 
   ## Technologies Used
 
@@ -228,9 +229,9 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 
   ### Additional Features to add in the next version
 
-  - 'High Score' box to record and save player high scores.
-  - Add a game difficulty setting so the player may choose how many rounds they want to play to win.
-  - Add more sound effects and visuals on game start to make it more fun and exciting.
+  - Add validation helpers to log in and register input fields such as adding a red outline to inout field when a user has overlooked a required inout field or entered wrong data. 
+  - Ability for users to post their experiences and comments using other people's recipes. 
+  - Functionality to upload profile photo.
 
   ## Deployment
 
