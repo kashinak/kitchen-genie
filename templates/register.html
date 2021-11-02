@@ -9,14 +9,14 @@
             <i class="fas fa-envelope-square"></i>
             <label for="email" class="form-label">Email Address</label>
             <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                minlength="5" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                minlength="5" maxlength="30" pattern="^[a-zA-Z0-9]{5,15}$" required>
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <!-- username -->
         <div class="mb-3 form-inputs">
             <i class="fas fa-user-plus"></i>
             <label for="username" class="form-label">User Name</label>
-            <input type="username" class="form-control" id="username" name="username" minlength="5" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-describedby="userName" required>
+            <input type="username" class="form-control" id="username" name="username" minlength="2" maxlength="30" pattern="^[a-zA-Z0-9]{2,15}$" aria-describedby="userName" required>
         </div>
         <!-- password -->
         <div class="mb-3 form-inputs">
