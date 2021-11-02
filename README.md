@@ -93,7 +93,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
      - Google fonts,'Open Sans' and generic 'Sans-serif' fonts were used on the home page title, subtitle, buttons, input field description text, user testimonials, menu items and content description text.
   4. [Font Awesome](https://fontawesome.com/)
 
-     - Font Awesome plus symbol 'fas fa-plus' and minus symbol 'fas fa-minus' were used to design buttons that add and delete user input field within the add_recipe.html page. Icon 'fas fa-plus-square' was used for the submit button for all the user inout for add_recipe.html page. Icons for social media links.
+     - Font Awesome plus symbol 'fas fa-plus' and minus symbol 'fas fa-minus' were used to design buttons that add and delete user input field within the add_recipe.html page. Icon 'fas fa-plus-square' was used for the submit button for all the user input for add_recipe.html page. Icons for social media links. Also user plus and user lock icons were used for adding username and password to register and log in forms. The icons elevate user input experience by reducing amount of text instructions and guide the user with icons instead. 
   5. [jQuery:](https://jquery.com/)
 
      - jQuery came with Bootstrap to make the header responsive.
@@ -115,7 +115,8 @@ Kitchen Genie is an online tool, bringing friends together to support each other
      - OS allows Python Flask application to set environment variables to store sensitive data and boost security.
   11. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
 
-     - This dependency was necessary for Flask to run and used to securely store user credentials.
+     - This dependency was necessary for Flask to run and used to securely store user credentials. One of the benefits of using Werkzeug with Flask is that it comes with 
+     simple to use security features. The two main security helpers used for this apllication are "generate_password_hash" and "check_password_hash".
   12. [Balsamiq](https://balsamiq.com/)
 
      - Balsamiq was used to create the [wireframes](https://github.com/kashinak/whale-song-memory-game/tree/main/assets/wireframes) during the design process.
