@@ -67,6 +67,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   - Flash messages to alert the user that their input data is unsuccessful such as when a user name or passwrod does not exist. 
   - Dropdown menus to speed up and facilitate user data input experience. 
   - Used Font Awesome icon prefixes for better user experience and intuitive layout.
+  - Links provided underneath Register and Login submit buttons to easily guide the user to the correct page depending on whether or not they are a registered user.
 
   ## Technologies Used
 
