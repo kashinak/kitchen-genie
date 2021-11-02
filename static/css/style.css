@@ -23,7 +23,8 @@ body {
 
 .flashes h4 {
   line-height: 2;
-
+  text-align: center;
+  color: #c1b68c;
 }
 
 /* Home Page - custom css */
@@ -37,7 +38,7 @@ body {
 }
 
 .post-meta span {
-  color: #c1b68c
+  color: #c1b68c;
 }
 
 /* About Page - custom css */
