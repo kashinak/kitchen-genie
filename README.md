@@ -7,7 +7,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
 - ### User stories
 
 
-  - #### First Time Player Goals
+  - #### First Time User Goals
 
   The target audience for this application is for anyone who wants to team up with their friends to save in food costs so they can do something else with their money. 
 
@@ -236,6 +236,7 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   - Add validation helpers to log in and register input fields such as adding a red outline to inout field when a user has overlooked a required inout field or entered wrong data. 
   - Ability for users to post their experiences and comments using other people's recipes. 
   - Functionality to upload profile photo.
+  - 'Forget Password and/or username?" retrieval functionality.
 
   ## Deployment
 
