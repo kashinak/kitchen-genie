@@ -157,8 +157,8 @@ def single_recipe():
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
-            "category_name": request.form.get("category_name"),
             "cost": request.form.get("cost"),
+            "category_name": request.form.get("category_name"),
             "serving_size": request.form.get("serving_size"),
             "leftover_days": request.form.get("leftover_days"),
             "prep_time": request.form.get("prep_time"),

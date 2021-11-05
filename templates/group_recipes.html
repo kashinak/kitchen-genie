@@ -9,78 +9,13 @@
                 <div class="info">
                     <h3>{{ recipe.recipe_name }}</h3>
                     <p></p>
-                    <a href="#"><button>view</button></a>
+                    <a href="{{ url_for('single_recipe') }}"><button>view</button></a>
                 </div>
             </div>
         </div>
     </section>
-            {{ recipe.category_name }}<br>
-            {{ recipe.cost }}<br>
-            {{ recipe.servings }}<br>
-            {{ recipe.leftover_days }}<br>
-            {{ recipe.cook_time }}<br>
-            {{ recipe.ingredients }}<br>
-            {{ recipe.cooking_source }}<br>
-            {{ recipe.preparation }}<br>
         {% endfor %}  
 {% endblock %}
          
-<!-- group recipes starts -->
-         <section id="group-recipes" class="container">
-            <div class="heading text-center">
-                <h1>group <span>recipes</span></h1>
-            </div>
 
-            <div class="box-container">
-                <div class="box">
-                    <img src="static/img/avocado_toast.jpg" alt="">
-                    <div class="info">
-                        <h3>Avocado & Basil Toast</h3>
-                        <p></p>
-                        <a href="#"><button>view</button></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="static/img/russian_cabbage_soup.jpg" alt="">
-                    <div class="info">
-                        <h3>Russian Cabbage Soup</h3>
-                        <p></p>
-                        <a href="#"><button>view</button></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="static/img/vegetarian_chili.jpg" alt="">
-                    <div class="info">
-                        <h3>Vegetarian Chili</h3>
-                        <p></p>
-                        <a href="#"><button>view</button></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="static/img/ravioli.jpg" alt="">
-                    <div class="info">
-                        <h3>Ravioli In Broth</h3>
-                        <p></p>
-                        <a href="#"><button>view</button></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="static/img/food_lasagna.jpg" alt="">
-                    <div class="info">
-                        <h3>Lasagna</h3>
-                        <p></p>
-                        <a href="#"><button>view</button></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="static/img/meat_soup.jpg" alt="">
-                    <div class="info">
-                        <h3>Bone Broth Soup</h3>
-                        <p></p>
-                        <a href="#"><button>view</button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- group recipes end -->
 
