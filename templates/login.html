@@ -6,10 +6,10 @@
             <!-- username -->
             <div class="mb-3 form-inputs">
                 <i class="fas fa-user-cog"></i>
-                <label for="username" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp"
-                    minlength="5" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="username" class="form-label">Username</label>
+                <input id="username" name="username" class="form-control" type="text" minlength="5"
+                maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    
             </div>
             <!-- password -->
             <div class="mb-3 form-inputs">
