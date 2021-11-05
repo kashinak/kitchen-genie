@@ -31,39 +31,8 @@ def group_recipes():
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    if request.method == "POST":
-        recipe = {
-            "recipe_name": request.form.get("recipe_name"),
-            "description": request.form.get("description"),
-            "category_name": request.form.get("category_name"),
-            "cost": request.form.get("cost"),
-            "serving_size": request.form.get("serving_size"),
-            "leftover_days": request.form.get("leftover_days"),
-            "prep_time": request.form.get("prep_time"),
-            "cook_time": request.form.get("cook_time"),
-            "tools": request.form.getlist("tools"),
-            "ingredients": request.form.getlist("ingredients"),
-            "preparation": request.form.getlist("preparation"),
-            "created_by": session["user"]
-        }
-        mongo.db.tasks.insert_one(recipe)
-        flash("Task Successfully Added")
-        return redirect(url_for("single_recipe"))
-    categories = mongo.db.categories.find().sort("category_name")
-    servings = mongo.db.servings.find().sort("serving_size")
-    leftovers = mongo.db.leftovers.find().sort("leftover_days")
-    prep_times = mongo.db.prep_times.find().sort("prep_time")
-    cook_times = mongo.db.cook_times.find().sort("cook_time")
-    tools = mongo.db.tools.find().sort("tools")
-    # ingredients = mongo.db.ingredients.find("ingredients")
-    # preparation = mongo.db.ingredients.find("preparation")
-    # created_by = mongo.db.created_by.find("created_by")
-    return render_template(
-        "add_recipe.html", categories=categories,
-        servings=servings, leftovers=leftovers,
-        prep_times=prep_times, cook_times=cook_times, tools=tools)
-        # tools=tools, ingredients=ingredients,
-        # preparation=preparation, created_by=created_by)
+    return render_template("add_recipe.html")
+ 
 
 
 @app.route("/about")
@@ -153,34 +122,9 @@ def logout():
 
 @app.route("/single_recipe")
 def single_recipe():
-    if request.method == "POST":
-        recipe = {
-            "recipe_name": request.form.get("recipe_name"),
-            "description": request.form.get("description"),
-            "cost": request.form.get("cost"),
-            "category_name": request.form.get("category_name"),
-            "serving_size": request.form.get("serving_size"),
-            "leftover_days": request.form.get("leftover_days"),
-            "prep_time": request.form.get("prep_time"),
-            "cook_time": request.form.get("cook_time"),
-            "tools": request.form.getlist("tools"),
-            "ingredients": request.form.getlist("ingredients"),
-            "preparation": request.form.getlist("preparation"),
-            "created_by": session["user"]
-        }
-        mongo.db.tasks.insert_one(recipe)
-        flash("Task Successfully Added")
-        return redirect(url_for("single_recipe"))
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    servings = mongo.db.servings.find().sort("serving_size", 1)
-    leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
-    prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
-    cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
-    tools = mongo.db.tools.find().sort("tools", 1)
-    return render_template(
-        "single_recipe.html", categories=categories, 
-        servings=servings, leftovers=leftovers, 
-        prep_times=prep_times, cook_times=cook_times, tools=tools)
+    recipes = list(mongo.db.tasks.find())
+    return render_template("single_recipe.html", recipes=recipes)
+
 
 @app.route("/your_recipes")
 def your_recipes():
