@@ -31,10 +31,41 @@ def group_recipes():
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    return render_template("add_recipe.html")
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "description": request.form.get("description"),
+            "category_name": request.form.get("category_name"),
+            "cost": request.form.get("cost"),
+            "serving_size": request.form.get("serving_size"),
+            "leftover_days": request.form.get("leftover_days"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "tools": request.form.getlist("tools"),
+            "ingredients": request.form.getlist("ingredients"),
+            "preparation": request.form.getlist("preparation"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(recipe)
+        flash("Task Successfully Added")
+        return redirect(url_for("single_recipe"))
+    categories = mongo.db.categories.find().sort("category_name")
+    servings = mongo.db.servings.find().sort("serving_size")
+    leftovers = mongo.db.leftovers.find().sort("leftover_days")
+    prep_times = mongo.db.prep_times.find().sort("prep_time")
+    cook_times = mongo.db.cook_times.find().sort("cook_time")
+    tools = mongo.db.tools.find().sort("tools")
+    # ingredients = mongo.db.ingredients.find("ingredients")
+    # preparation = mongo.db.ingredients.find("preparation")
+    # created_by = mongo.db.created_by.find("created_by")
+    return render_template(
+        "add_recipe.html", categories=categories,
+        servings=servings, leftovers=leftovers,
+        prep_times=prep_times, cook_times=cook_times, tools=tools)
+        # tools=tools, ingredients=ingredients,
+        # preparation=preparation, created_by=created_by)
+
  
-
-
 @app.route("/about")
 def about():
     return render_template("about.html", page_title="About")
@@ -120,10 +151,10 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/single_recipe")
+@app.route("/single_recipe/")
 def single_recipe():
-    recipes = list(mongo.db.tasks.find())
-    return render_template("single_recipe.html", recipes=recipes)
+    recipe = mongo.db.recipes.find_one({'_id':ObjectId("615624a5209b2b20e09c0e61")})
+    return render_template("single_recipe.html", recipe=recipe)
 
 
 @app.route("/your_recipes")

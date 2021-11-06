@@ -19,6 +19,7 @@
                 <div class="row">
                     <!-- Upload Image -->
                     <div class="mb-3">
+                        <i class="far fa-image"></i>
                         <label for="recipe_photo" class="form-label">Upload Recipe Photo</label>
                         <input class="form-control" type="file" id="recipe_photo" name="recipe_photo">
                     </div>
@@ -26,26 +27,30 @@
                 <div class="row recipe-name">
                     <!-- Recipe Name -->
                     <div class="col-12 mb-0">
+                        <i class="fas fa-pencil-alt"></i>
                         <label for="recipe_name" class="form-label">Add Recipe Name</label>
                     </div>
                     <div class="col-12">
                         <input type="text" class="form-control" id="recipe_name" name="recipe_name"
-                            placeholder="Mary's vegetarian recipe">
+                            placeholder="Mary's vegetarian recipe" minlength="5" maxlength="50" required>
                     </div>
                 </div>
                 <div class="row">
                     <!-- Recipe Description -->
                     <div class="col-12 input-group recipe-description mt-3 mb-0">
+                        <i class="fas fa-align-left mr-2"></i>
                         <label for="description">Enter Recipe Description</label>
                     </div>
                     <div class="col-12 input-group">
-                        <textarea id="description" name="description" class="form-control card-text"
-                            aria-label="With textarea" placeholder="This delicious vegetarian chili is my mother's recipe. Enjoy!"></textarea>
+                        <textarea id="description" name="description" class="form-control card-text" 
+                        aria-label="With textarea" placeholder="This delicious vegetarian chili is my mother's recipe. Enjoy!" 
+                        minlength="5" maxlength="200" required></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <!-- Add Food Cost -->
                     <div class="col-12 input-group mb-0">
+                        <i class="fas fa-money-bill-wave mr-2"></i>
                         <label for="cost">Add Food Cost</label>
                     </div>
                 </div>
@@ -58,17 +63,19 @@
                 <div class="row dropdown-controls">
                     <!-- Category Selection -->
                     <div class="col-6 input-group mb-3 mt-3">
+                        <i class="fas fa-folder-open mr-3"></i>
                         <select id="category_name" name="category_name" class="form-select validate"
                             aria-label="Default select example" required>
                             <option selected>Choose Diet Type</option>
                             {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
-                        <label for="category_name"></label>
+                        <label for="category_name">Choose Diet Type</label>
                     </div>
                     <!-- Serving Selection -->
                     <div class="col-6 input-group mb-3">
+                        <i class="fas fa-utensils mr-3"></i>
                         <select id="serving_size" name="serving_size" class="form-select validate"
                             aria-label="Default select example" required>
                             <option selected>Choose Serving Size</option>
@@ -82,6 +89,7 @@
                 <div class="row">
                     <!-- Leftover Selection -->
                     <div class="col-6 col-sm-12 input-group mb-3">
+                        <i class="fas fa-box mr-3"></i>
                         <select id="leftover_days" name="leftover_days" class="form-select validate"
                             aria-label="Default select example" required>
                             <option selected>Choose Leftover Days</option>
@@ -93,6 +101,7 @@
                     </div>
                     <!-- Prep Time Selection -->
                     <div class="col-6 col-sm-12 input-group mb-3">
+                        <i class="fas fa-mortar-pestle mr-3"></i>
                         <select id="prep_time" name="prep_time" class="form-select validate"
                             aria-label="Default select example" required>
                             <option selected>Choose Prep Time</option>
@@ -106,9 +115,10 @@
                 <div class="row">
                     <!-- Cook Time Selection -->
                     <div class="col-6 col-sm-12 input-group mb-3">
+                        <i class="fas fa-temperature-high mr-3"></i>
                         <select id="cook_time" name="cook_time" class="form-select validate"
                             aria-label="Default select example" required>
-                            <option selected>Choose Cook Time</option>
+                            <option selected><i class="fab fa-gripfire ml-0"></i>Choose Cook Time</option>
                             {% for cook in cook_times %}
                             <option value="{{ cook.cook_time }}">{{ cook.cook_time }}</option>
                             {% endfor %}
@@ -117,6 +127,7 @@
                     </div>
                     <!-- Primary Tool Selection -->
                     <div class="col-6 col-sm-12 input-group mb-3">
+                        <i class="fas fa-blender mr-3"></i>
                         <select id="tools" name="tools" class="form-select validate" aria-label="Default select example"
                             required>
                             <option selected>Choose Primary Tools</option>
@@ -131,6 +142,7 @@
                     <!-- Add Ingredients dynamic input boxes -->
                     <div class="col-12" id="ingredient-list">
                         <!-- input boxes to add ingredients one-by-one-->
+                        <i class="fas fa-carrot"></i>
                         <label for="ingredient">Add Ingredients </label>
                         <input type="text" id="ingredient" class="form-control ingredients" name="ingredient"
                             placeholder="1/4 cup olive oil" required />
@@ -144,6 +156,7 @@
                     <!-- Add Preparation Instructions dynamic input boxes -->
                     <div class="col-12 mt-3" id="preparation-list">
                         <!-- input boxes to add preparation steps one-by-one-->
+                        <i class="fas fa-fire"></i>
                         <label for="preparation">Add Preparation Steps</label>
                         <input type="text" id="preparation" name="preparation" class="form-control preparation-step" 
                             placeholder="Sauté onions, garlic, and peppers 5-7 minutes" required />
@@ -158,6 +171,7 @@
                     <!-- Created By-->
                     <div class="col-12 mt-3">
                         <div class="mb-3">
+                            <i class="fas fa-pen"></i>
                             <label for="created_by" class="form-label">Created By</label>
                             <input type="text" class="form-control" id="created_by" name="created_by"
                                 placeholder="Mary Jenkins">
