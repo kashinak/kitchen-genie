@@ -151,9 +151,10 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/single_recipe/")
-def single_recipe():
-    recipe = mongo.db.recipes.find_one({'_id':ObjectId("615624a5209b2b20e09c0e61")})
+@app.route("/single_recipe/<recipe_id>")
+def single_recipe(recipe_id):
+    print('recipe_id')
+    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("single_recipe.html", recipe=recipe)
 
 
