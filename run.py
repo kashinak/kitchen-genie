@@ -26,7 +26,8 @@ def index():
 @app.route("/group_recipes")
 def group_recipes():
     recipes = mongo.db.recipes.find()
-    return render_template("group_recipes.html", recipes=recipes)
+    return render_template(
+        "group_recipes.html", page_title="Group_Recipes", recipes=recipes)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -59,7 +60,7 @@ def add_recipe():
     # preparation = mongo.db.ingredients.find("preparation")
     # created_by = mongo.db.created_by.find("created_by")
     return render_template(
-        "add_recipe.html", categories=categories,
+        "add_recipe.html", page_title="Add_Recipe", categories=categories,
         servings=servings, leftovers=leftovers,
         prep_times=prep_times, cook_times=cook_times, tools=tools)
         # tools=tools, ingredients=ingredients,
@@ -100,7 +101,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
-    return render_template("register.html")
+    return render_template("register.html", page_title="Register")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -129,7 +130,7 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("login.html", page_title="Login")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -138,7 +139,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", page_title="Profile", username=username)
 
     return redirect(url_for("login"))
 
@@ -155,7 +156,7 @@ def logout():
 def single_recipe(recipe_id):
     print('recipe_id')
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    return render_template("single_recipe.html", recipe=recipe)
+    return render_template("single_recipe.html", page_title="Single_Recipe", recipe=recipe)
 
 
 @app.route("/your_recipes")
@@ -185,7 +186,7 @@ def your_recipes():
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
     return render_template(
-        "your_recipes.html", categories=categories, 
+        "your_recipes.html", page_title="Your_Recipes", categories=categories, 
         servings=servings, leftovers=leftovers, 
         prep_times=prep_times, cook_times=cook_times, tools=tools)
 

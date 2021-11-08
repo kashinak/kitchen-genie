@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" 
 	    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<!-- Custom styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 	<!-- Provides option to include custom styles or scripts that are applied from one of our child templates. Any custom CSS can be injected into a 'block styles'-->
 	{% block styles %}
@@ -158,9 +159,9 @@
 	<script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-	<script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+	<script src="{{url_for('static', filename='js/script.js')}}"></script>
 	<script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
-
+    <!-- Custom JQuery script -->
 	<script>
 		$("#copyright").text(new Date().getFullYear());
 	</script>
