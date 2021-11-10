@@ -30,6 +30,13 @@ def group_recipes():
         "group_recipes.html", page_title="Group_Recipes", recipes=recipes)
 
 
+@app.route("/group_recipes/<recipe_name>")
+def single_recipe(recipe_name):
+    recipe = {}
+    recipe = mongo.db.recipes.find_one({'recipe_name': ObjectId(recipe_id)})
+    return render_template("single_recipe.html", recipe=recipe)
+
+
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -150,13 +157,6 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
-
-
-@app.route("/single_recipe/<recipe_id>")
-def single_recipe(recipe_id):
-    print('recipe_id')
-    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    return render_template("single_recipe.html", page_title="Single_Recipe", recipe=recipe)
 
 
 @app.route("/your_recipes")

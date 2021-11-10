@@ -6,12 +6,15 @@
     <div class="recipe-page">
  
         <section class="recipe-hero">
-            <h3>{{ recipe._id }}</h3>
-            <h2>{{ recipe.recipe_name }}</h2>
-            <img src="static/img/vegetarian_chili.jpg" class="img recipe-hero-img" alt="Vegetarian chili">
+            <div class="col-md-5">
+                <img src="{{ recipe.recipe.image }}" class="img recipe-hero-img"
+                    alt="Profile image for {{ recipe.recipe_name }}">
+                <h2 class="col-md-7">{{ recipe.recipe_name }}</h2>
+            </div>
         <article>
-            <p class="recipe-info">{{ recipe.description }}
-            </p>
+            <div class="col-md-12">
+                <p class="recipe-info">{{ recipe.description }}</p>
+            </div>
             <!-- Recipe Icons -->
             <div class="recipe-icons">
                 <!-- Single Recipe Icon -->
