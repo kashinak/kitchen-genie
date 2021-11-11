@@ -1,45 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>{{ page_title }}</h2>
+    <h2 class="center-align">{{ page_title }}</h2>
 
-<div class="row">
-    <form method="POST" action="{{ url_for('register') }}">
-        <!-- email -->
-        <div class="mb-3 form-inputs">
-            <i class="fas fa-envelope-square"></i>
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                minlength="5" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <!-- username -->
-        <div class="mb-3 form-inputs">
-            <i class="fas fa-user-plus"></i>
-            <label for="username" class="form-label">User Name</label>
-            <input type="username" class="form-control" id="username" name="username" minlength="2" maxlength="30" pattern="^[a-zA-Z0-9]{2,15}$" aria-describedby="userName" required>
-        </div>
-        <!-- password -->
-        <div class="mb-3 form-inputs">
-            <i class="fas fa-user-lock"></i>
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" minlength="5" maxlength="30"
-                pattern="^[a-zA-Z0-9]{5,30}$" required>
-        </div>
-        <!-- register -->
-        <div class="register-button d-flex justify-content-center mb-4">
-            <button type="submit" class="btn btn-primary">Register <i class="fas fa-sign-in-alt"></i></button>
-        </div>
-    </form>
-</div>
-
-<div class="row">
-    <div class="col-12 d-flex justify-content-center mb-4">
-        <p class="d-flex align-items-center link-text">
-            Already Registered?&ensp; 
-            <a href="{{ url_for('login') }}">Log In</a>
-        </p>
-        
+    <div class="row">
+        <form method="POST" action="{{ url_for('register') }}">
+            <!-- email -->
+            <div class="mb-3 form-inputs">
+                <i class="fas fa-envelope-square"></i>
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                    minlength="5" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <!-- username -->
+            <div class="mb-3 form-inputs">
+                <i class="fas fa-user-plus"></i>
+                <label for="username" class="form-label">User Name</label>
+                <input type="username" class="form-control" id="username" name="username" minlength="2" maxlength="30" pattern="^[a-zA-Z0-9]{2,15}$" aria-describedby="userName" required>
+            </div>
+            <!-- password -->
+            <div class="mb-3 form-inputs">
+                <i class="fas fa-user-lock"></i>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" minlength="5" maxlength="30"
+                    pattern="^[a-zA-Z0-9]{5,30}$" required>
+            </div>
+            <!-- register submit button-->
+            <div class="register-button d-flex justify-content-center mb-4">
+                <button type="submit" class="btn btn-primary">Register <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+        </form>
     </div>
-</div>
+    <!-- Log In page link -->
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mb-4">
+            <p class="d-flex align-items-center link-text">
+                Already Registered?&ensp; 
+                <a href="{{ url_for('login') }}">Log In</a>
+            </p>
+        </div>
+    </div>
 
 {% endblock %}
