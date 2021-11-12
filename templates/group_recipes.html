@@ -8,9 +8,8 @@
                 <img src="static/img/avocado_toast.jpg" alt="">
                 <div class="info">
                     <h3>{{ recipe.recipe_name }}</h3>
-                    <h3>{{ recipe._id }}</h3>
                     <p></p>
-                    <a href="/group_recipes/{{ recipe.recipe_name|replace(' ','-')|replace('&','and')|replace('é','e')|replace('.','-')|lower()}}"><button>view</button></a>
+                    <a href="{{ url_for('single_recipe') }}"><button>view</button></a>
                 </div>
             </div>
         </div>
