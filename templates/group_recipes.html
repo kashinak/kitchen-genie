@@ -3,18 +3,18 @@
     <section id="group-recipes" class="container">
         <h2>{{ page_title }}</h2>
         {% for recipe in recipes %}
-        <div class="box-container">
-            <div class="box">
-                <img src="static/img/avocado_toast.jpg" alt="">
-                <div class="info">
-                    <h3>{{ recipe.recipe_name }}</h3>
-                    <p></p>
-                    <a href="{{ url_for('single_recipe') }}"><button>view</button></a>
+            <div class="box-container">
+                <div class="box">
+                    <img src="static/img/avocado_toast.jpg" alt="">
+                    <div class="info">
+                        <h3>{{ recipe.recipe_name }}</h3>
+                        <p></p>
+                        <a href="{{ url_for('single_recipe') }}"><button>view</button></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
         {% endfor %}  
+    </section>
 {% endblock %}
          
 

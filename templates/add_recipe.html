@@ -1,188 +1,179 @@
 {% extends "base.html" %}
 {% block content %}
-   
-    <h2>{{ page_title }}</h2>
-        {% for recipe in recipes %}
-            {{ recipe.recipe_name }}<br>
-            {{ recipe.category_name }}<br>
-            {{ recipe.cost }}<br>
-            {{ recipe.servings }}<br>
-            {{ recipe.leftover_days }}<br>
-            {{ recipe.cook_time }}<br>
-            {{ recipe.ingredients }}<br>
-            {{ recipe.cooking_source }}<br>
-            {{ recipe.preparation }}<br>
-        {% endfor %}
-    <div class="card recipe-card">
-        <form method="post" action="{{ url_for('add_recipe') }}">
-            <div class="container add-recipe-selections">
-                <div class="row">
-                    <!-- Upload Image -->
-                    <div class="mb-3">
-                        <i class="far fa-image"></i>
-                        <label for="recipe_photo" class="form-label">Upload Recipe Photo</label>
-                        <input class="form-control" type="file" id="recipe_photo" name="recipe_photo">
-                    </div>
-                </div>
-                <div class="row recipe-name">
-                    <!-- Recipe Name -->
-                    <div class="col-12 mb-0">
-                        <i class="fas fa-pencil-alt"></i>
-                        <label for="recipe_name" class="form-label">Add Recipe Name</label>
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" id="recipe_name" name="recipe_name"
-                            placeholder="Mary's vegetarian recipe" minlength="5" maxlength="50" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Recipe Description -->
-                    <div class="col-12 input-group recipe-description mt-3 mb-0">
-                        <i class="fas fa-align-left mr-2"></i>
-                        <label for="description">Enter Recipe Description</label>
-                    </div>
-                    <div class="col-12 input-group">
-                        <textarea id="description" name="description" class="form-control card-text" 
-                        aria-label="With textarea" placeholder="This delicious vegetarian chili is my mother's recipe. Enjoy!" 
-                        minlength="5" maxlength="200" required></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Add Food Cost -->
-                    <div class="col-12 input-group mb-0">
-                        <i class="fas fa-money-bill-wave mr-2"></i>
-                        <label for="cost">Add Food Cost</label>
-                    </div>
-                </div>
-                <div class="input-group mb-0">
-                    <span class="input-group-text">$</span>
-                    <input id="cost" name="cost" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text">.00</span>
-                </div>
-                <!-- Selection Dropdown controls -->
-                <div class="row dropdown-controls">
-                    <!-- Category Selection -->
-                    <div class="col-6 input-group mb-3 mt-3">
-                        <i class="fas fa-folder-open mr-3"></i>
-                        <select id="category_name" name="category_name" class="form-select validate"
-                            aria-label="Default select example" required>
-                            <option selected>Choose Diet Type</option>
-                            {% for category in categories %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="category_name">Choose Diet Type</label>
-                    </div>
-                    <!-- Serving Selection -->
-                    <div class="col-6 input-group mb-3">
-                        <i class="fas fa-utensils mr-3"></i>
-                        <select id="serving_size" name="serving_size" class="form-select validate"
-                            aria-label="Default select example" required>
-                            <option selected>Choose Serving Size</option>
-                            {% for serving in servings %}
-                            <option value="{{ serving.serving_size }}">{{ serving.serving_size }}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="serving_size"></label>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Leftover Selection -->
-                    <div class="col-6 col-sm-12 input-group mb-3">
-                        <i class="fas fa-box mr-3"></i>
-                        <select id="leftover_days" name="leftover_days" class="form-select validate"
-                            aria-label="Default select example" required>
-                            <option selected>Choose Leftover Days</option>
-                            {% for leftover in leftovers %}
-                            <option value="{{ leftover.leftover_days }}">{{ leftover.leftover_days }}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="leftover_days"></label>
-                    </div>
-                    <!-- Prep Time Selection -->
-                    <div class="col-6 col-sm-12 input-group mb-3">
-                        <i class="fas fa-mortar-pestle mr-3"></i>
-                        <select id="prep_time" name="prep_time" class="form-select validate"
-                            aria-label="Default select example" required>
-                            <option selected>Choose Prep Time</option>
-                            {% for prep in prep_times %}
-                            <option value="{{ prep.prep_time }}">{{ prep.prep_time }}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="prep_time"></label>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Cook Time Selection -->
-                    <div class="col-6 col-sm-12 input-group mb-3">
-                        <i class="fas fa-temperature-high mr-3"></i>
-                        <select id="cook_time" name="cook_time" class="form-select validate"
-                            aria-label="Default select example" required>
-                            <option selected><i class="fab fa-gripfire ml-0"></i>Choose Cook Time</option>
-                            {% for cook in cook_times %}
-                            <option value="{{ cook.cook_time }}">{{ cook.cook_time }}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="cook_time"></label>
-                    </div>
-                    <!-- Primary Tool Selection -->
-                    <div class="col-6 col-sm-12 input-group mb-3">
-                        <i class="fas fa-blender mr-3"></i>
-                        <select id="tools" name="tools" class="form-select validate" aria-label="Default select example"
-                            required>
-                            <option selected>Choose Primary Tools</option>
-                            {% for tool in tools %}
-                            <option value="{{ tool.tools }}">{{ tool.tools }}</option>
-                            {% endfor %}
-                        </select>
-                        <label for="tools"></label>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Add Ingredients dynamic input boxes -->
-                    <div class="col-12" id="ingredient-list">
-                        <!-- input boxes to add ingredients one-by-one-->
-                        <i class="fas fa-carrot"></i>
-                        <label for="ingredient">Add Ingredients </label>
-                        <input type="text" id="ingredient" class="form-control ingredients" name="ingredient"
-                            placeholder="1/4 cup olive oil" required />
-                        <!--buttons to add / remove input boxes-->
-                        <button type="button" id="btn-add-ingredient" class="button btn-input"><i class="btn-outline-secondary fas fa-plus"></i>
-                        </button>
-                        <button type="button" id="btn-remove-ingredient" class="button btn-input"><i
-                                class="btn-outline-secondary fas fa-minus" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <!-- Add Preparation Instructions dynamic input boxes -->
-                    <div class="col-12 mt-3" id="preparation-list">
-                        <!-- input boxes to add preparation steps one-by-one-->
-                        <i class="fas fa-fire"></i>
-                        <label for="preparation">Add Preparation Steps</label>
-                        <input type="text" id="preparation" name="preparation" class="form-control preparation-step" 
-                            placeholder="Sauté onions, garlic, and peppers 5-7 minutes" required />
-                        <!--buttons to add / remove input boxes-->
-                        <button type="button" id="btn-add-preparation" class="button btn-input"><i
-                                class="btn-outline-secondary fas fa-plus" aria-hidden="true"></i>
-                        </button>
-                        <button type="button" id="btn-remove-preparation" class="button btn-input"><i
-                                class="btn-outline-secondary fas fa-minus" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <!-- Created By-->
-                    <div class="col-12 mt-3">
+    {% for recipe in recipes %}
+    <h1>Add_Recipe</h1>
+        <h2>{{ page_title }}</h2>
+        <div class="card recipe-card">
+            <form method="post" action="{{ url_for('add_recipe') }}">
+                <div class="container add-recipe-selections">
+                    <div class="row">
+                        <!-- Upload Image -->
                         <div class="mb-3">
-                            <i class="fas fa-pen"></i>
-                            <label for="created_by" class="form-label">Created By</label>
-                            <input type="text" class="form-control" id="created_by" name="created_by"
-                                placeholder="Mary Jenkins">
+                            <i class="far fa-image"></i>
+                            <label for="recipe_photo" class="form-label">Upload Recipe Photo</label>
+                            <input class="form-control" type="file" id="recipe_photo" name="recipe_photo">
                         </div>
                     </div>
-                    <!-- Submit Button -->
-                    <div class="col-12 submit-button">
-                        <button href="{{ url_for('add_recipe') }}" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i></button>
+                    <div class="row recipe-name">
+                        <!-- Recipe Name -->
+                        <div class="col-12 mb-0">
+                            <i class="fas fa-pencil-alt"></i>
+                            <label for="recipe_name" class="form-label">Add Recipe Name</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="recipe_name" name="recipe_name"
+                                placeholder="Mary's vegetarian recipe" minlength="5" maxlength="50" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Recipe Description -->
+                        <div class="col-12 input-group recipe-description mt-3 mb-0">
+                            <i class="fas fa-align-left mr-2"></i>
+                            <label for="description">Enter Recipe Description</label>
+                        </div>
+                        <div class="col-12 input-group">
+                            <textarea id="description" name="description" class="form-control card-text" 
+                            aria-label="With textarea" placeholder="This delicious vegetarian chili is my mother's recipe. Enjoy!" 
+                            minlength="5" maxlength="200" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Add Food Cost -->
+                        <div class="col-12 input-group mb-0">
+                            <i class="fas fa-money-bill-wave mr-2"></i>
+                            <label for="cost">Add Food Cost</label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">$</span>
+                        <input id="cost" name="cost" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">{{ recipe.cost }}
+                        <span class="input-group-text">.00</span>
+                    </div>
+                    <!-- Selection Dropdown controls -->
+                    <div class="row dropdown-controls">
+                        <!-- Category Selection -->
+                        <div class="col-6 input-group mb-3 mt-3">
+                            <i class="fas fa-folder-open mr-3"></i>
+                            <select id="category_name" name="category_name" class="form-select validate"
+                                aria-label="Default select example" required>
+                                <option selected>Choose Diet Type</option>
+                                {% for category in categories %}
+                                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="category_name">Choose Diet Type</label>
+                        </div>
+                        <!-- Serving Selection -->
+                        <div class="col-6 input-group mb-3">
+                            <i class="fas fa-utensils mr-3"></i>
+                            <select id="serving_size" name="serving_size" class="form-select validate"
+                                aria-label="Default select example" required>
+                                <option selected>Choose Serving Size</option>
+                                {% for serving in servings %}
+                                <option value="{{ serving.serving_size }}">{{ serving.serving_size }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="serving_size"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Leftover Selection -->
+                        <div class="col-6 col-sm-12 input-group mb-3">
+                            <i class="fas fa-box mr-3"></i>
+                            <select id="leftover_days" name="leftover_days" class="form-select validate"
+                                aria-label="Default select example" required>
+                                <option selected>Choose Leftover Days</option>
+                                {% for leftover in leftovers %}
+                                <option value="{{ leftover.leftover_days }}">{{ leftover.leftover_days }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="leftover_days"></label>
+                        </div>
+                        <!-- Prep Time Selection -->
+                        <div class="col-6 col-sm-12 input-group mb-3">
+                            <i class="fas fa-mortar-pestle mr-3"></i>
+                            <select id="prep_time" name="prep_time" class="form-select validate"
+                                aria-label="Default select example" required>
+                                <option selected>Choose Prep Time</option>
+                                {% for prep in prep_times %}
+                                <option value="{{ prep.prep_time }}">{{ prep.prep_time }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="prep_time"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Cook Time Selection -->
+                        <div class="col-6 col-sm-12 input-group mb-3">
+                            <i class="fas fa-temperature-high mr-3"></i>
+                            <select id="cook_time" name="cook_time" class="form-select validate"
+                                aria-label="Default select example" required>
+                                <option selected><i class="fab fa-gripfire ml-0"></i>Choose Cook Time</option>
+                                {% for cook in cook_times %}
+                                <option value="{{ cook.cook_time }}">{{ cook.cook_time }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="cook_time"></label>
+                        </div>
+                        <!-- Primary Tool Selection -->
+                        <div class="col-6 col-sm-12 input-group mb-3">
+                            <i class="fas fa-blender mr-3"></i>
+                            <select id="tools" name="tools" class="form-select validate" aria-label="Default select example"
+                                required>
+                                <option selected>Choose Primary Tools</option>
+                                {% for tool in tools %}
+                                <option value="{{ tool.tools }}">{{ tool.tools }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="tools"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Add Ingredients dynamic input boxes -->
+                        <div class="col-12" id="ingredient-list">
+                            <!-- input boxes to add ingredients one-by-one-->
+                            <i class="fas fa-carrot"></i>
+                            <label for="ingredient">Add Ingredients </label>
+                            <input type="text" id="ingredient" class="form-control ingredients" name="ingredient"
+                                placeholder="1/4 cup olive oil" required />
+                            <!--buttons to add / remove input boxes-->
+                            <button type="button" id="btn-add-ingredient" class="button btn-input"><i class="btn-outline-secondary fas fa-plus"></i>
+                            </button>
+                            <button type="button" id="btn-remove-ingredient" class="button btn-input"><i
+                                    class="btn-outline-secondary fas fa-minus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!-- Add Preparation Instructions dynamic input boxes -->
+                        <div class="col-12 mt-3" id="preparation-list">
+                            <!-- input boxes to add preparation steps one-by-one-->
+                            <i class="fas fa-fire"></i>
+                            <label for="preparation">Add Preparation Steps</label>
+                            <input type="text" id="preparation" name="preparation" class="form-control preparation-step" 
+                                placeholder="Sauté onions, garlic, and peppers 5-7 minutes" required />
+                            <!--buttons to add / remove input boxes-->
+                            <button type="button" id="btn-add-preparation" class="button btn-input"><i
+                                    class="btn-outline-secondary fas fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" id="btn-remove-preparation" class="button btn-input"><i
+                                    class="btn-outline-secondary fas fa-minus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!-- Created By-->
+                        <div class="col-12 mt-3">
+                            <div class="mb-3">
+                                <i class="fas fa-pen"></i>
+                                <label for="created_by" class="form-label">Created By</label>
+                                <input type="text" class="form-control" id="created_by" name="created_by"
+                                    placeholder="Mary Jenkins">
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="col-12 submit-button">
+                            <button href="{{ url_for('add_recipe') }}" class="btn btn-primary">Add Recipe <i class="fas fa-plus-square"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    {% endfor %}
 {% endblock %}

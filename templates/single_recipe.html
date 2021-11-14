@@ -61,15 +61,14 @@
                 <article>
                     <i class="fas fa-list-ol"></i>
                     <h4>instructions</h4>
-                    {% for step in preparation %}
+                    {% for prep in preparation %}
                     <!-- Single Instruction -->
                         <div class="single-instruction">
                             <header>
                                 <p>step 1</p>
                                 <div></div>
                             </header>
-                            <p>In a large pot, (or in a pressure cooker on sauté setting), 
-                                heat the olive oil over medium-high heat.
+                            <p>{{ recipe.prep }}
                             </p>
                         </div>
                     {% endfor %}
@@ -80,7 +79,7 @@
                         <h4>ingredients</h4>
                         {% for ingredient in ingredients %}
                             <p class="single-ingredient">
-                                1/4 cup olive oil
+                                {{ recipe.ingredient }}
                             </p>
                        {% endfor %}
                     </div>
