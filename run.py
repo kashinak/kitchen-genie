@@ -39,7 +39,6 @@ def register():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
-
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
@@ -145,11 +144,37 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipe Successfully Added")
-        return redirect(url_for("group_recipes"))
+        flash("Task Successfully Added")
+        return redirect(url_for('group_recipes'))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
+    servings = mongo.db.servings.find().sort("serving_size", 1)
+    leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
+    prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
+    cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
+    tools = mongo.db.tools.find().sort("tools", 1)
+    recipes = mongo.db.add_recipe.recipes.find().sort("recipe_name", 1)
     return render_template(
-        "add_recipe.html", categories=categories, recipe=recipe)
+        "add_recipe.html", categories=categories,
+        servings=servings, leftovers=leftovers,
+        prep_times=prep_times, cook_times=cook_times, tools=tools, recipes=recipes)
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id":ObjectId(recipe_id)})
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    servings = mongo.db.servings.find().sort("serving_size", 1)
+    leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
+    prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
+    cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
+    tools = mongo.db.tools.find().sort("tools", 1)
+    recipes = mongo.db.add_recipe.recipes.find().sort("recipe_name", 1)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories,
+        servings=servings, leftovers=leftovers,
+        prep_times=prep_times, cook_times=cook_times, tools=tools, recipes=recipes)
 
 
 @app.route("/about")

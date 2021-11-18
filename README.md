@@ -69,6 +69,8 @@ Kitchen Genie is an online tool, bringing friends together to support each other
   - Used Font Awesome icon prefixes for better user experience and intuitive layout.
   - Links provided underneath Register and Login submit buttons to easily guide the user to the correct page depending on whether or not they are a registered user.
   - Defensive programming applied to register page using RegEx and minlength, maxlength and required attributes to create secure basic user registration requirements.
+  - Validation feedback to end user for registration and login forms so that if the user inputs incorrect information,
+  they know exactly what they did wrong and what they need to fix.
   ## Technologies Used
 
   ---

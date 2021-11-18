@@ -91,11 +91,15 @@
 	</header>
 
 	<section>
-		<!-- flash messages -->
-		{% with messages = get_flashed_messages() %}
+		<!-- flash messages -->  
+		<!-- Python Flask Tutorial: Full-Featured Web App Part3 - Forms and User Input https://youtu.be/UIJKdCIEXUQ 
+            by Corey Schafer - add with_categories=true as an argument in with statement below to allow us to grab 
+			bootstrap 'success' category that we passsed through to our flash message in 'register' function in run.py.
+		    added alert alert-{{ category }} in div class to allow bootstrap category alert styles to to style dive wrapping flash messages-->
+		{% with messages = get_flashed_messages(with_categories=true) %}
 		    {% if messages %}
-			    {% for message in messages %}
-				   <div class="row flashes">
+			    {% for category, message in messages %}
+				   <div class="row flashes alert alert-{{ category }}">
 					   <h4>{{ message }}</h4>
 				   </div>
 				{% endfor %}
