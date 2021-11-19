@@ -163,7 +163,6 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id":ObjectId(recipe_id)})
-
     categories = mongo.db.categories.find().sort("category_name", 1)
     servings = mongo.db.servings.find().sort("serving_size", 1)
     leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)

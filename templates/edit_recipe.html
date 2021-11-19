@@ -191,11 +191,13 @@
                                         placeholder="Mary Jenkins" value="{{ recipe.created_by }}" >
                                 </div>
                             </div>
-                            <!-- Submit Button -->
+                          
                             <div class="col-12 submit-button">
+                                <!-- Cancel Button -->
                                 <a href="{{ url_for('group_recipes') }}" class="btn btn-secondary">
                                     Cancel <i class="fas fa-times-circle right"></i>
                                 </a>
+                                  <!-- Submit Button -->
                                 <button href="{{ url_for('add_recipe') }}" class="btn btn-primary">Edit Recipe <i class="fas fa-edit"></i></button>
                             </div>
                         </div>
