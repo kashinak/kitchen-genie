@@ -230,8 +230,8 @@ def your_recipes():
             "preparation": request.form.getlist("preparation"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one(recipe)
-        flash("Task Successfully Added")
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
         return redirect(url_for("your_recipes"))
     categories = mongo.db.categories.find().sort("category_name", 1)
     servings = mongo.db.servings.find().sort("serving_size", 1)
