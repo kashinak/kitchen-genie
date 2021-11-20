@@ -10,7 +10,9 @@
                         <h3>{{ recipe.recipe_name }}</h3>
                         <p><em>by: {{ recipe.created_by }}</em></p>
                         <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"><button>view</button></a>
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><button>edit</button></a>
+                        {% if session.user|lower == recipe.created_by|lower %}
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><button>edit</button></a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

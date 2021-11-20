@@ -144,7 +144,7 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Task Successfully Added")
+        flash("Recipe Successfully Added")
         return redirect(url_for('group_recipes'))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -162,18 +162,35 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id":ObjectId(recipe_id)})
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "description": request.form.get("description"),
+            "category_name": request.form.get("category_name"),
+            "cost": request.form.get("cost"),
+            "serving_size": request.form.get("serving_size"),
+            "leftover_days": request.form.get("leftover_days"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "tools": request.form.get("tools"),
+            "ingredients": request.form.getlist("ingredients"),
+            "preparation": request.form.getlist("preparation"),
+            "created_by": session["user"]
+            }
+    mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+    flash("Recipe Successfully Updated")
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     servings = mongo.db.servings.find().sort("serving_size", 1)
     leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
     prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
-    recipes = mongo.db.add_recipe.recipes.find().sort("recipe_name", 1)
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories,
         servings=servings, leftovers=leftovers,
-        prep_times=prep_times, cook_times=cook_times, tools=tools, recipes=recipes)
+        prep_times=prep_times, cook_times=cook_times, tools=tools)
 
 
 @app.route("/about")
