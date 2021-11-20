@@ -193,6 +193,13 @@ def edit_recipe(recipe_id):
         prep_times=prep_times, cook_times=cook_times, tools=tools)
 
 
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipe.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("group_recipes"))
+
+
 @app.route("/about")
 def about():
     return render_template("about.html", page_title="About")
