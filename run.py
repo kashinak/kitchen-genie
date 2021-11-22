@@ -232,6 +232,12 @@ def delete_recipe(recipe_id):
     return redirect(url_for("group_recipes"))
 
 
+@app.route("/get_categories")
+def get_catgories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
+
+
 @app.route("/about")
 def about():
     return render_template("about.html", page_title="About")
