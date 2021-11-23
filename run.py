@@ -144,26 +144,9 @@ def your_recipes():
 
 @app.route("/single_recipe/<recipe_id>")
 def single_recipe(recipe_id):
-    if request.method == "POST":
-        recipe_id = {
-            "recipe_name": request.form.get("recipe_name"),
-            "description": request.form.get("description"),
-            "cost": request.form.get("cost"),
-            "category_name": request.form.get("category_name"),
-            "serving_size": request.form.get("serving_size"),
-            "leftover_days": request.form.get("leftover_days"),
-            "prep_time": request.form.get("prep_time"),
-            "cook_time": request.form.get("cook_time"),
-            "tools": request.form.getlist("tools"),
-            "ingredients": request.form.getlist("ingredients"),
-            "preparation": request.form.getlist("preparation"),
-            "created_by": session["user"]
-        }
-        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-        flash("Here is your requested recipe")
-        return redirect(url_for("single_recipe"))
-
-    return render_template("single_recipe.html", recipe=recipe)
+    print('recipe_id')
+    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    return render_template("single_recipe.html", page_title="Single_Recipe", recipe=recipe)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
