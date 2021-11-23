@@ -102,6 +102,14 @@ def group_recipes():
         "group_recipes.html", page_title="Group_Recipes", recipes=recipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template(
+        "group_recipes.html", page_title="Group_Recipes", recipes=recipes)
+
+
 @app.route("/your_recipes")
 def your_recipes():
     if request.method == "POST":
@@ -137,7 +145,7 @@ def your_recipes():
 @app.route("/single_recipe/<recipe_id>")
 def single_recipe(recipe_id):
     if request.method == "POST":
-        open_recipe = {
+        recipe_id = {
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
             "cost": request.form.get("cost"),
@@ -155,7 +163,7 @@ def single_recipe(recipe_id):
         flash("Here is your requested recipe")
         return redirect(url_for("single_recipe"))
 
-    return render_template("single_recipe.html")
+    return render_template("single_recipe.html", recipe=recipe)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -185,7 +193,7 @@ def add_recipe():
     prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
-    recipes = mongo.db.add_recipe.recipes.find().sort("recipe_name", 1)
+    recipes = mongo.db.recipes.find().sort("recipe_name", 1)
     return render_template(
         "add_recipe.html", categories=categories,
         servings=servings, leftovers=leftovers,
@@ -227,13 +235,13 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.recipe.remove({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("group_recipes"))
 
 
 @app.route("/get_categories")
-def get_catgories():
+def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
