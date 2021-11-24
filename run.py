@@ -144,7 +144,7 @@ def your_recipes():
 
 @app.route("/single_recipe/<recipe_id>")
 def single_recipe(recipe_id):
-    print('recipe_id')
+    print(recipe_id)
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("single_recipe.html", page_title="Single_Recipe", recipe=recipe)
 

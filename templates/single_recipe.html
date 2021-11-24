@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for recipe in recipes %}
+
         <h2>{{ page_title }}</h2>
 
         <!-- code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ -->
@@ -8,7 +8,7 @@
     
             <section class="recipe-hero">
                 <div class="col-md-5">
-                    <img src="{{ recipe.recipe.image }}" class="img recipe-hero-img"
+                    <img src="{{ recipe.image }}" class="img recipe-hero-img"
                         alt="Profile image for {{ recipe.recipe_name }}">
                     <h2 class="col-md-7">{{ recipe.recipe_name }}</h2>
                 </div>
@@ -86,7 +86,7 @@
                     <div>
                         <i class="fas fa-utensils"></i>
                         <h4>tools</h4>
-                        <p class="single-tool">{{ recipe_tools }}</p>
+                        <p class="single-tool">{{ recipe.tools }}</p>
                     </div>
                     <div>
                         <p><em>by: {{ recipe.created_by }}</em></p>
@@ -94,5 +94,5 @@
                 </article>
             </section>
         </div>
-    {% endfor %}
+
 {% endblock %}
