@@ -54,7 +54,7 @@
                             aria-label="Default select example" required>
                             <option selected>Choose Diet Type</option>
                             {% for category in categories %}
-                                <option value="{{ category.category_name }}"></option>
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
                         <label for="category_name"></label>
@@ -65,7 +65,7 @@
                             aria-label="Default select example" required>
                             <option selected>Choose Serving Size</option>
                             {% for serving in servings %}
-                            <option value="{{ serving.serving_size }}"></option>
+                                <option value="{{ serving.serving_size }}">{{ serving.serving_size }}</option>
                             {% endfor %}
                         </select>
                         <label for="serving_size"></label>
@@ -78,7 +78,7 @@
                             aria-label="Default select example" required>
                             <option selected>Choose Leftover Days</option>
                             {% for leftover in leftovers %}
-                            <option value="{{ leftover.leftover_days }}"></option>
+                                <option value="{{ leftover.leftover_days }}">{{ leftover.leftover_days }}</option>
                             {% endfor %}
                         </select>
                         <label for="leftover_days"></label>
@@ -89,7 +89,7 @@
                             aria-label="Default select example" required>
                             <option selected>Choose Prep Time</option>
                             {% for prep in prep_times %}
-                            <option value="{{ prep.prep_time }}"></option>
+                                <option value="{{ prep.prep_time }}">{{ prep.prep_time }}</option>
                             {% endfor %}
                         </select>
                         <label for="prep_time"></label>
@@ -102,7 +102,7 @@
                             aria-label="Default select example" required>
                             <option selected><i class="fab fa-gripfire ml-0"></i>Choose Cook Time</option>
                             {% for cook in cook_times %}
-                            <option value="{{ cook.cook_time }}"></option>
+                                <option value="{{ cook.cook_time }}">{{ cook.cook_time }}</option>
                             {% endfor %}
                         </select>
                         <label for="cook_time"></label>
@@ -113,7 +113,7 @@
                             required>
                             <option selected>Choose Primary Tools</option>
                             {% for tool in tools %}
-                            <option value="{{ tool.tools }}"></option>
+                                <option value="{{ tool.tools }}">{{ tool.tools }}</option>
                             {% endfor %}
                         </select>
                         <label for="tools"></label>
