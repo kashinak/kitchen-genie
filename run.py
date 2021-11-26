@@ -7,13 +7,6 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-# For NPM:   
-npm install jquery --save
-npm install blueimp-file-upload --save
-npm install cloudinary-jquery-file-upload --save
-
-# For Bower: 
-bower install cloudinary-jquery --save
 
 # instance of Flask
 app = Flask(__name__)

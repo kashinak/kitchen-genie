@@ -205,6 +205,10 @@ body {
 /* Single Recipe Page */
 /* code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ */
 
+.recipe-page{
+  color: #c1b68c;
+}
+
 .recipe-hero {
   display: grid;
   gap: 3rem;
@@ -231,19 +235,10 @@ body {
   text-align: center;
 }
 
-.recipe-icons i {
-  font-size: 1.5rem;
-  color: var(--primary, 500);
-}
-
 .recipe-icons h5,
 .recipe-icons p {
   margin-bottom: 0;
   font-size: 1rem;
-}
-
-.recipe-icons p {
-  color: var(--grey-600);
 }
 
 .recipe-tags {

@@ -4,7 +4,7 @@
 
 
         <!-- code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ -->
-        <div class="recipe-page">
+        <div class="recipe-page"> 
     
             <section class="recipe-hero">
                 <div class="col-md-5">
@@ -20,8 +20,8 @@
                 <div class="recipe-icons">
                     <!-- Single Recipe Icon -->
                     <article>
-                        <h5>cost</h5>
                         <i class="fas fa-dollar-sign"></i>
+                        <h5>cost</h5>
                         <p>{{ recipe.cost }}</p>
                     </article>
                     <!-- Single Recipe Icon -->
@@ -32,7 +32,7 @@
                     </article>
                     <!-- Single Recipe Icon -->
                     <article>
-                        <i class="fal fa-refrigerator"></i>
+                        <i class="fas fa-clone"></i>
                         <h5>leftover days</h5>
                         <p>{{ recipe.leftover_days }}</p>
                     </article>
@@ -40,19 +40,20 @@
                     <article>
                         <i class="fas fa-clock"></i>
                         <h5>prep time</h5>
-                        <p>{{ recipe.prep_time }}.</p>
+                        <p>{{ recipe.prep_time }}</p>
                     </article>
                     <!-- Single Recipe Icon -->
                     <article>
                         <i class="far fa-clock"></i>
                         <h5>cook time</h5>
-                        <p>{{ recipe.cook_time }}.</p>
+                        <p>{{ recipe.cook_time }}</p>
                     </article>
-                </div>
-                <!-- Recipe Category -->
-                <div class="recipe-tags">
-                    <h5>Category</h5>
-                    <h6>{{ recipe.category_name }}</h6> 
+                    <!-- Single Recipe Icon -->
+                    <article>
+                        <i class="fas fa-folder-open"></i>
+                        <h5>category&nbsp;</h5>
+                        <p>{{ recipe.category_name }}</p>
+                    </article>
                 </div>
             </article>
             </section>
