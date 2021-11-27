@@ -18,7 +18,5 @@ $(document).ready(function() {
     $('#btn-remove-preparation').on('click', function () {
         $("#preparation-list input:last").remove();
       });
-    /* Cloudinary SDK installation */
-    $.cloudinary.config({ cloud_name: 'dcll7ella', secure: true});
-     
+
 });
