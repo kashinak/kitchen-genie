@@ -1,4 +1,4 @@
-const cloudName = "hzxyensd5"; // replace with your own cloud name
+const cloudName = "dcll7ella"; // replace with your own cloud name
 const uploadPreset = "aoh4fpwm"; // replace with your own upload preset
 
 // Remove the comments from the code below to add

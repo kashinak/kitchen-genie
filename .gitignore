@@ -6,4 +6,4 @@ __pycache__
 *.py[cod]
 node_modules/
 .github/
-cloudinary-account-config.py
+static/js/cloudinary-account-config.js
