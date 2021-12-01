@@ -1,5 +1,5 @@
 const cloudName = "dcll7ella"; // replace with your own cloud name
-const uploadPreset = "aoh4fpwm"; // replace with your own upload preset
+const uploadPreset = "u1eizdsc"; // replace with your own upload preset
 
 // Remove the comments from the code below to add
 // additional functionality.
@@ -12,16 +12,16 @@ const myWidget = cloudinary.createUploadWidget(
   {
     cloudName: cloudName,
     uploadPreset: uploadPreset,
-    // cropping: true, //add a cropping step
+    cropping: true, //add a cropping step
     // showAdvancedOptions: true,  //add advanced options (public_id and tag)
-    // sources: [ "local", "url"], // restrict the upload sources to URL and local files
-    // multiple: false,  //restrict upload to a single file
-    // folder: "user_images", //upload files to the specified folder
-    // tags: ["users", "profile"], //add the given tags to the uploaded files
+    sources: [ "local", "url"], // restrict the upload sources to URL and local files
+    multiple: false,  //restrict upload to a single file
+    folder: "kitchen_genie", //upload files to the specified folder
+    tags: ["users", "profile"], //add the given tags to the uploaded files
     // context: {alt: "user_uploaded"}, //add the given context data to the uploaded files
-    // clientAllowedFormats: ["images"], //restrict uploading to image files only
-    // maxImageFileSize: 2000000,  //restrict file size to less than 2MB
-    // maxImageWidth: 2000, //Scales the image down to a width of 2000 pixels before uploading
+    clientAllowedFormats: ["images"], //restrict uploading to image files only
+    maxImageFileSize: 2000000,  //restrict file size to less than 2MB
+    maxImageWidth: 500, //Scales the image down to a width of 2000 pixels before uploading
     // theme: "purple", //change to a purple theme
   },
   (error, result) => {
@@ -41,3 +41,21 @@ document.getElementById("upload_widget").addEventListener(
   },
   false
 );
+
+// cloudinary callback. Sets upload image url input
+function imageUploaded(error, result) {
+  $( '#recipe_image' ).prop("src", result[0].secure_url);
+  $( '#recipe_image_url' ).val(result[0].secure_url);
+}
+
+// Shows the cloudinary image upload widget
+$( "#upload_widget" ).click(function(event) {
+  event.preventDefault();
+
+  cloudinary.openUploadWidget(
+    {
+      cloud_name: 'dcll7ella',
+      upload_preset: 'u1eizdsc'
+    },
+    imageUploaded);
+});

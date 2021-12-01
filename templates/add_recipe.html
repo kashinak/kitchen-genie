@@ -5,8 +5,10 @@
         <form method="POST" action="{{ url_for('add_recipe') }}">
             <div class="container add-recipe-selections">
                 <!-- Recipe Image Upload via Cloudinary Upload Widget -->
-                <div class="col s12 l6 recipe-header-img">
+                <div class="col-12 recipe-header-img">
+                    <img id="recipe_image" src="{{ recipe.image }}" alt="recipe image">
                     <button id="upload_widget" class="cloudinary-button">Upload Recipe Photo</button>
+                    <input id="recipe_image_url" type="hidden" name="image" value="{{ recipe.image }}">
                 </div>
                 <div class="row recipe-name">
                     <!-- Recipe Name -->
@@ -170,7 +172,7 @@
     <script type="text/javascript">  
         var myWidget = cloudinary.createUploadWidget({
         cloudName: 'dcll7ella', 
-        uploadPreset: 'my_preset'}, (error, result) => { 
+        uploadPreset: 'u1eizdsc'}, (error, result) => { 
             if (!error && result && result.event === "success") { 
             console.log('Done! Here is the image info: ', result.info); 
             }
