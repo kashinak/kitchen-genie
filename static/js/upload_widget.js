@@ -34,7 +34,7 @@ const myWidget = cloudinary.createUploadWidget(
   }
 );
 
-document.getElementById("upload_widget").addEventListener(
+document.getElementById("upload-widget").addEventListener(
   "click",
   function () {
     myWidget.open();
@@ -42,20 +42,3 @@ document.getElementById("upload_widget").addEventListener(
   false
 );
 
-// cloudinary callback. Sets upload image url input
-function imageUploaded(error, result) {
-  $( '#recipe_image' ).prop("src", result[0].secure_url);
-  $( '#recipe_image_url' ).val(result[0].secure_url);
-}
-
-// Shows the cloudinary image upload widget
-$( "#upload_widget" ).click(function(event) {
-  event.preventDefault();
-
-  cloudinary.openUploadWidget(
-    {
-      cloud_name: 'dcll7ella',
-      upload_preset: 'u1eizdsc'
-    },
-    imageUploaded);
-});

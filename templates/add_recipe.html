@@ -5,10 +5,10 @@
         <form method="POST" action="{{ url_for('add_recipe') }}">
             <div class="container add-recipe-selections">
                 <!-- Recipe Image Upload via Cloudinary Upload Widget -->
-                <div class="col-12 recipe-header-img">
-                    <img id="recipe_image" src="{{ recipe.image }}" alt="recipe image">
-                    <button id="upload_widget" class="cloudinary-button">Upload Recipe Photo</button>
-                    <input id="recipe_image_url" type="hidden" name="image" value="{{ recipe.image }}">
+                <div class="col-12 recipe-img">
+                 
+                    <button id="upload-widget" class="cloudinary-button">Upload Recipe Photo</button>
+                    
                 </div>
                 <div class="row recipe-name">
                     <!-- Recipe Name -->

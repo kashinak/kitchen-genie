@@ -307,6 +307,10 @@ body {
   row-gap: 2rem;
 }
 
+.second-column, ul {
+  padding-left: 1rem;
+}
+
 .single-ingredient {
   border-bottom: 2px solid var(--grey-300);
   padding-bottom: 0.75rem;
@@ -319,6 +323,7 @@ body {
   color: var(--primary-500);
   text-transform: capitalize;
 }
+
 
 /* Add Recipe Page */
 /* Box Shadow styles from w3schools https://www.w3schools.com/css/css3_shadows_box.asp */

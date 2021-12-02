@@ -62,15 +62,12 @@
                 <article>
                     <i class="fas fa-list-ol"></i>
                     <h4>instructions</h4>
-                    {% for prep in preparation %}
+                    {% for prep in recipe.preparation %}
                     <!-- Single Instruction -->
+                    
                         <div class="single-instruction">
-                            <header>
-                                <p>step 1</p>
-                                <div></div>
-                            </header>
-                            <p>{{ recipe.prep }}
-                            </p>
+                            {{ loop.index }}
+                            <p>{{ prep }}</p>
                         </div>
                     {% endfor %}
                 </article>
@@ -78,10 +75,12 @@
                     <div>
                         <i class="far fa-list-alt"></i>
                         <h4>ingredients</h4>
-                        {% for ingredient in ingredients %}
-                            <p class="single-ingredient">
-                                {{ recipe.ingredient }}
-                            </p>
+                        {% for ingredient in recipe.ingredients %}
+                        <ul>
+                            <li class="single-ingredient">
+                                {{ ingredient }}
+                            </li>
+                        </ul>
                        {% endfor %}
                     </div>
                     <div>
