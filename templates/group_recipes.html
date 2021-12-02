@@ -22,7 +22,7 @@
             {% for recipe in recipes %}
                 <div class="box-container">
                     <div class="box">
-                        <img src="static/img/vegetarian_chili.jpg" alt="">
+                        <img src="{{ recipe.image }}" alt="">
                         <div class="info">
                             <h3>{{ recipe.recipe_name }}</h3>
                             <p><em>by: {{ recipe.created_by }}</em></p>
