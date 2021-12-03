@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
     <h2>{{ page_title }}</h2>
+    
     <div class="card recipe-card">
         <form method="POST" action="{{ url_for('add_recipe') }}">
             <div class="container add-recipe-selections">
+                <div id="recipe-photo" class="col-12"></div>
                 <!-- Recipe Image Upload via Cloudinary Upload Widget -->
                 <div class="col-12 recipe-img">
                  
                     <button id="upload-widget" class="cloudinary-button">Upload Recipe Photo</button>
-                    
+                
                 </div>
                 <div class="row recipe-name">
                     <!-- Recipe Name -->
@@ -174,12 +176,17 @@
         cloudName: 'dcll7ella', 
         uploadPreset: 'u1eizdsc'}, (error, result) => { 
             if (!error && result && result.event === "success") { 
-            console.log('Done! Here is the image info: ', result.info); 
-            }
-        }
-        )
+                console.log('Done! Here is the image info: ', result.info); 
+                let url = result.info.secure_url;
+                let image = `<img src=${url} alt=''>`;
+                let image_form = `<input type="hidden" id="image" name="image" value=${url}>`;
+                div = document.getElementById('recipe-photo');
+                div.insertAdjacentHTML('beforeend', image);
+                div.insertAdjacentHTML('beforeend', image_form);
+                }
+            })
 
-        document.getElementById("upload_widget").addEventListener("click", function(){
+        document.getElementById("upload-widget").addEventListener("click", function(){
             myWidget.open();
         }, false);
     </script>

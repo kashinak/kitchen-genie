@@ -153,6 +153,7 @@ def single_recipe(recipe_id):
 def add_recipe():
     if request.method == "POST":
         recipe = {
+            "image": request.form.get("image"),
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
             "category_name": request.form.get("category_name"),
@@ -170,6 +171,7 @@ def add_recipe():
         flash("Recipe Successfully Added")
         return redirect(url_for('group_recipes'))
 
+    image = mongo.db.recipes.find_one("image")
     categories = mongo.db.categories.find().sort("category_name", 1)
     servings = mongo.db.servings.find().sort("serving_size", 1)
     leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
@@ -180,13 +182,15 @@ def add_recipe():
     return render_template(
         "add_recipe.html", categories=categories,
         servings=servings, leftovers=leftovers,
-        prep_times=prep_times, cook_times=cook_times, tools=tools, recipes=recipes)
+        prep_times=prep_times, cook_times=cook_times, 
+        tools=tools, recipes=recipes, image=image)
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
         submit = {
+            "image": reguest.form.get("image"),
             "recipe_name": request.form.get("recipe_name"),
             "description": request.form.get("description"),
             "category_name": request.form.get("category_name"),
@@ -202,8 +206,9 @@ def edit_recipe(recipe_id):
             }
     mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
     flash("Recipe Successfully Updated")
-
+    
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    image = mongo.db.recipes.find_one("image")
     categories = mongo.db.categories.find().sort("category_name", 1)
     servings = mongo.db.servings.find().sort("serving_size", 1)
     leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
@@ -213,7 +218,7 @@ def edit_recipe(recipe_id):
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories,
         servings=servings, leftovers=leftovers,
-        prep_times=prep_times, cook_times=cook_times, tools=tools)
+        prep_times=prep_times, cook_times=cook_times, tools=tools, image=image)
 
 
 @app.route("/delete_recipe/<recipe_id>")
