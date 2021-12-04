@@ -203,9 +203,9 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.getlist("ingredients"),
             "preparation": request.form.getlist("preparation"),
             "created_by": session["user"]
-            }
-    mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-    flash("Recipe Successfully Updated")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Successfully Updated")
     
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     image = mongo.db.recipes.find_one("image")
@@ -216,9 +216,9 @@ def edit_recipe(recipe_id):
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
     return render_template(
-        "edit_recipe.html", recipe=recipe, categories=categories,
+        "edit_recipe.html", image=image, recipe=recipe, categories=categories,
         servings=servings, leftovers=leftovers,
-        prep_times=prep_times, cook_times=cook_times, tools=tools, image=image)
+        prep_times=prep_times, cook_times=cook_times, tools=tools)
 
 
 @app.route("/delete_recipe/<recipe_id>")
