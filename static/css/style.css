@@ -91,7 +91,7 @@ body {
 #group-recipes .heading h1 span {
   color: #FFF200;
 }
-
+/* 
 #group-recipes .box-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,11 +105,11 @@ body {
   flex-wrap: wrap;
   margin: 1rem auto;
   width: 90%;
-}
+} */
 
 #group-recipes .box-container .box {
-  height: 20rem;
-  width: 25rem;
+  height: 22rem;
+  width: 27rem;
   border-radius: .5rem;
   margin: 2rem;
   cursor: pointer;
@@ -153,7 +153,7 @@ body {
 }
 
 #group-recipes .box-container .box .info h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #group-recipes .box-container .box .info p {
@@ -176,8 +176,9 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  height: 4rem;
-  width: 14rem;
+  height: 3rem;
+  width: 10rem;
+  margin: 10px 10px 10px 10px;
 }
 
 #group-recipes .box-container .box .info button::before {
@@ -201,6 +202,9 @@ body {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+/* Search Bar */
+
 
 /* Single Recipe Page */
 /* code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ */

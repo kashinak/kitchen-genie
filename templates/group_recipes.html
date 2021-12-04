@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+   <!-- Search Bar -->
     <section id="group-recipes" class="container">
         <div class="row card">
             <form action="{{ url_for('search') }}" method="post" class="col-12">
@@ -18,22 +19,29 @@
                 </div>
             </form>
         </div>
+        <!-- Recipe Image Box w/View, Edit, Delete buttons -->
         {% if recipes|length > 0 %}
             {% for recipe in recipes %}
-                <div class="box-container">
-                    <div class="box">
-                        <img src="{{ recipe.image }}" alt="">
-                        <div class="info">
-                            <h3>{{ recipe.recipe_name }}</h3>
-                            <p><em>by: {{ recipe.created_by }}</em></p>
-                            <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"><button>View</button></a>
-                            {% if session.user|lower == recipe.created_by|lower %}
-                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><button>Edit</button></a>
-                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"><button>Delete</button></a>
-                            {% endif %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-6 col sm-12">
+                        <div class="box-container">
+                            <div class="box">
+                                <img src="{{ recipe.image }}" alt="">
+                                <div class="info">
+                                    <h3>{{ recipe.recipe_name }}</h3>
+                                    <p><em>by: {{ recipe.created_by }}</em></p>
+                                    <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"><button>View</button></a>
+                                    {% if session.user|lower == recipe.created_by|lower %}
+                                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><button>Edit</button></a>
+                                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"><button>Delete</button></a>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
             {% endfor %}
         {% else %}
             <h3>No Results Found</h3>

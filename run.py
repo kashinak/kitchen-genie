@@ -215,9 +215,8 @@ def edit_recipe(recipe_id):
     prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
-    return render_template(
-        "edit_recipe.html", image=image, recipe=recipe, categories=categories,
-        servings=servings, leftovers=leftovers,
+    return render_template("edit_recipe.html", image=image, recipe=recipe, 
+        categories=categories,servings=servings, leftovers=leftovers,
         prep_times=prep_times, cook_times=cook_times, tools=tools)
 
 
