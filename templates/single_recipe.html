@@ -7,7 +7,7 @@
         <div class="recipe-page"> 
     
             <section class="recipe-hero">
-                <div class="col-md-5">
+                <div class="col-12">
                     <img src="{{ recipe.image }}" class="img recipe-hero-img"
                         alt="Profile image for {{ recipe.recipe_name }}">
                     <h2 class="col-md-7">{{ recipe.recipe_name }}</h2>
@@ -33,25 +33,25 @@
                     <!-- Single Recipe Icon -->
                     <article>
                         <i class="fas fa-clone"></i>
-                        <h5>leftover days</h5>
-                        <p>{{ recipe.leftover_days }}</p>
+                        <h5>leftovers</h5>
+                        <p>{{ recipe.leftover_days }} days</p>
                     </article>
                     <!-- Single Recipe Icon -->
                     <article>
                         <i class="fas fa-clock"></i>
-                        <h5>prep time</h5>
+                        <h5>prep</h5>
                         <p>{{ recipe.prep_time }}</p>
                     </article>
                     <!-- Single Recipe Icon -->
                     <article>
                         <i class="far fa-clock"></i>
-                        <h5>cook time</h5>
+                        <h5>cook</h5>
                         <p>{{ recipe.cook_time }}</p>
                     </article>
                     <!-- Single Recipe Icon -->
                     <article>
                         <i class="fas fa-folder-open"></i>
-                        <h5>category&nbsp;</h5>
+                        <h5>diet&nbsp;</h5>
                         <p>{{ recipe.category_name }}</p>
                     </article>
                 </div>

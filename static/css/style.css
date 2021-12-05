@@ -27,6 +27,9 @@ body {
   color: #c1b68c;
 }
 
+/* Nav Bar */
+
+
 /* Home Page - custom css */
 
 .post-title {
@@ -204,7 +207,13 @@ body {
 }
 
 /* Search Bar */
+.input-field {
+  padding-top: 5px;
+}
 
+#search {
+  margin: 5px;
+}
 
 /* Single Recipe Page */
 /* code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ */
