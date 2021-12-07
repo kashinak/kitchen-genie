@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-        <h1>Edit_Recipe</h1>
-            <h2>{{ page_title }}</h2>
+ 
+            <h2 class="page-title">{{ page_title }}</h2>
             <div class="card recipe-card">
                 <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
                     <div class="container add-recipe-selections">
@@ -45,13 +45,14 @@
                         </div>
                         <div class="input-group mb-0">
                             <span class="input-group-text">$</span>
-                            <input id="cost" name="cost" type="text" value="{{ recipe.cost }}" class="form-control" aria-label="Amount (to the nearest dollar)">{{ recipe.cost }}
+                            <input id="cost" name="cost" type="text" value="{{ recipe.cost }}" class="form-control" aria-label="Amount (to the nearest dollar)">
                             <span class="input-group-text">.00</span>
                         </div>
                         <!-- Selection Dropdown controls -->
                         <div class="row dropdown-controls">
                             <!-- Category Selection -->
                             <div class="col-6 input-group mb-3 mt-3">
+                                <i class="fas fa-folder-open mr-3"></i>
                                 <select id="category_name" name="category_name" class="form-select validate"
                                     aria-label="Default select example" required>
                                     <option disabled>Choose Diet Type</option>
@@ -63,7 +64,7 @@
                                         {% endif %}
                                     {% endfor %}
                                 </select>
-                                <label for="category_name">Choose Diet Type</label>
+                                <label for="category_name"></label>
                             </div>
                             <!-- Serving Selection -->
                             <div class="col-6 input-group mb-3">
@@ -85,7 +86,7 @@
                         <div class="row">
                             <!-- Leftover Selection -->
                             <div class="col-6 col-sm-12 input-group mb-3">
-                                <i class="fas fa-box mr-3"></i>
+                                <i class="fas fa-calendar-plus mr-3"></i>
                                 <select id="leftover_days" name="leftover_days" class="form-select validate"
                                     aria-label="Default select example" required>
                                     <option selected>Choose Leftover Days</option>

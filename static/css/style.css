@@ -453,6 +453,14 @@ div, .card {
   margin-left: 4px;
   margin-top: 4px;
 }
+
+/* Edit Recipe Page */
+
+.page-title, h2 {
+  text-align: center;
+  color:#c1b68c;
+}
+
 /* footer */
 
 .copyright {

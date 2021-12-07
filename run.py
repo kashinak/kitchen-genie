@@ -183,7 +183,7 @@ def add_recipe():
         "add_recipe.html", categories=categories,
         servings=servings, leftovers=leftovers,
         prep_times=prep_times, cook_times=cook_times, 
-        tools=tools, image=image)
+        tools=tools, image=image, page_title="Add Recipe")
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -198,7 +198,7 @@ def edit_recipe(recipe_id):
     tools = mongo.db.tools.find().sort("tools", 1)
     return render_template("edit_recipe.html", recipe=recipe, image=image, categories=categories, 
         servings=servings, leftovers=leftovers, prep_times=prep_times,
-        cook_times=cook_times, tools=tools)
+        cook_times=cook_times, tools=tools, page_title="Edit Recipe")
 
 
 @app.route("/delete_recipe/<recipe_id>")

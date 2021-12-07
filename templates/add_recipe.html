@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>{{ page_title }}</h2>
+    <h2 class="page-title">{{ page_title }}</h2>
     
     <div class="card recipe-card">
         <form method="POST" action="{{ url_for('add_recipe') }}">
             <div class="container add-recipe-selections">
                 <div id="recipe-photo" class="col-12"></div>
                 <!-- Recipe Image Upload via Cloudinary Upload Widget -->
-                <div class="col-12 recipe-img">
+                <div class="col-12 recipe-img pl-0">
                  
-                    <button id="upload-widget" class="cloudinary-button">Upload Recipe Photo</button>
+                    <button id="upload-widget" class="cloudinary-button mb-3">Upload Recipe Photo</button>
                 
                 </div>
                 <div class="row recipe-name">
@@ -122,6 +122,7 @@
                 <div class="row">
                     <!-- Add Ingredients dynamic input boxes -->
                     <div class="col-12" id="ingredient-list">
+                        <i class="fas fa-carrot"></i>
                         <!-- input boxes to add ingredients one-by-one-->
                         <label for="ingredient">Add Ingredients </label>
                         <input type="text" id="ingredient" class="form-control ingredients" name="ingredient"
@@ -135,6 +136,7 @@
                     </div>
                     <!-- Add Preparation Instructions dynamic input boxes -->
                     <div class="col-12 mt-3" id="preparation-list">
+                        <i class="fas fa-fire"></i>
                         <!-- input boxes to add preparation steps one-by-one-->
                         <label for="preparation">Add Preparation Steps</label>
                         <input type="text" id="preparation" name="preparation" class="form-control preparation-step" 
