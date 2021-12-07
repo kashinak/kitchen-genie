@@ -137,7 +137,7 @@ def your_recipes():
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
     return render_template(
-        "your_recipes.html", page_title="Your_Recipes", categories=categories, 
+        "your_recipes.html", page_title="Your Recipes", categories=categories, 
         servings=servings, leftovers=leftovers, 
         prep_times=prep_times, cook_times=cook_times, tools=tools)
 

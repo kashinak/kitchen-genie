@@ -2,10 +2,10 @@
 {% block content %}
    <!-- Search Bar -->
     <section id="group-recipes" class="container">
-        <div class="row card">
+        <div class="row card" id="search-bar">
             <form action="{{ url_for('search') }}" method="post" class="col-12">
-                <div class="row center-align">
-                    <div class="input-field col-12 col-md-8">
+                <div class="row">
+                    <div class="input-field col-12 col-md-8" id="search-box">
                         <i class="fas fa-search prefix"></i>
                         <input type="text" name="query" id="query" minlength="3" class="validate" required>
                         <label for="query">Search Recipes</label>

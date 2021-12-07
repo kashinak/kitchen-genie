@@ -7,11 +7,9 @@
                 <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
                     <div class="container add-recipe-selections">
                         <div class="row">
-                            <!-- Upload Image -->
-                            <div class="mb-3">
-                                <i class="far fa-image"></i>
-                                <label for="recipe_photo" class="form-label">Upload Recipe Photo</label>
-                                <input class="form-control" type="file" id="recipe_photo" name="recipe_photo">
+                            <!-- Recipe Image Upload via Cloudinary Upload Widget -->
+                            <div class="col-12 recipe-img">
+                                <button id="upload-widget" class="cloudinary-button mb-3">Upload Recipe Photo</button>
                             </div>
                         </div>
                         <div class="row recipe-name">

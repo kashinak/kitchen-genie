@@ -211,9 +211,15 @@ body {
   padding-top: 5px;
 }
 
-#search {
-  margin: 5px;
+#search-bar {
+  width: 40rem;
+  padding: 10px;
 }
+
+#search-box {
+  padding-left: 30px;
+}
+
 
 /* Single Recipe Page */
 /* code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ */
@@ -459,6 +465,7 @@ div, .card {
 .page-title, h2 {
   text-align: center;
   color:#c1b68c;
+  margin-bottom: 40px;
 }
 
 /* footer */
