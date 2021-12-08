@@ -155,8 +155,10 @@
                                 <!-- input boxes to add ingredients one-by-one-->
                                 <i class="fas fa-carrot"></i>
                                 <label for="ingredient">Add Ingredients </label>
-                                <input type="text" id="ingredient" class="form-control ingredients" name="ingredient"
-                                    placeholder="1/4 cup olive oil" value="{{ recipe.ingredients }}" required />
+                                {% for item in recipe.ingredients %}
+                                    <input type="text" id="ingredient" class="form-control ingredients" name="ingredient"
+                                    placeholder="1/4 cup olive oil" value="{{ item }}" required />
+                                {% endfor %}
                                 <!--buttons to add / remove input boxes-->
                                 <button type="button" id="btn-add-ingredient" class="button btn-input"><i class="btn-outline-secondary fas fa-plus"></i>
                                 </button>
@@ -169,8 +171,10 @@
                                 <!-- input boxes to add preparation steps one-by-one-->
                                 <i class="fas fa-fire"></i>
                                 <label for="preparation">Add Preparation Steps</label>
-                                <input type="text" id="preparation" name="preparation" class="form-control preparation-step" 
-                                    placeholder="Sauté onions, garlic, and peppers 5-7 minutes" value="{{ recipe.preparation }}" required />
+                                {% for step in recipe.preparation %}
+                                    <input type="text" id="preparation" name="preparation" class="form-control preparation-step" 
+                                    placeholder="Sauté onions, garlic, and peppers 5-7 minutes" value="{{ step }}" required />
+                                {% endfor %}
                                 <!--buttons to add / remove input boxes-->
                                 <button type="button" id="btn-add-preparation" class="button btn-input"><i
                                         class="btn-outline-secondary fas fa-plus" aria-hidden="true"></i>
