@@ -81,7 +81,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile.html", page_title="Profile", username=username)
+        return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
 
@@ -215,9 +215,10 @@ def edit_recipe(recipe_id):
     prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
     cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
     tools = mongo.db.tools.find().sort("tools", 1)
+    ingredients = mongo.db.ingredients.find()
     return render_template("edit_recipe.html", recipe=recipe, image=image, categories=categories, 
         servings=servings, leftovers=leftovers, prep_times=prep_times,
-        cook_times=cook_times, tools=tools, page_title="Edit Recipe")
+        cook_times=cook_times, tools=tools, ingredients=ingredients, page_title="Edit Recipe")
 
 
 @app.route("/delete_recipe/<recipe_id>")
@@ -249,4 +250,4 @@ def contact():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=True)  

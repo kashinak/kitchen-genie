@@ -76,6 +76,21 @@ body {
     padding: 10px;
 }
 
+/* Profile Page */
+
+h3 {
+  text-align: center;
+  color:#c1b68c;
+  font-size:medium;
+  margin: 40px 40px;
+}
+
+.profile-text {
+  margin-top: 40px;
+}
+
+
+
 /* group recipes */
 /* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant using HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
 

@@ -28,12 +28,13 @@ const myWidget = cloudinary.createUploadWidget(
     if (!error && result && result.event === "success") {
       console.log("Done! Here is the image info: ", result.info);
       document
-        .getElementById("uploadedimage")
+        .getElementById("recipe_image")
         .setAttribute("src", result.info.secure_url);
     }
   }
 );
 
+// Opens Cloudinary Upload Widget when upload imgae button is clicked
 document.getElementById("upload-widget").addEventListener(
   "click",
   function () {
@@ -42,13 +43,14 @@ document.getElementById("upload-widget").addEventListener(
   false
 );
 
-// Shows the current uploaded recipe image in edit recipe form
+// Code modeled after Sean Young's Cloudinary post on Slack
+// Displays recipe image that was uploaded in add recipe form now showing in edit recipe form
 $( "#recipe_image_url" ).on('change', function(event) {
-  $( '#recipe_header_image' ).prop("src", $( this ).val());
+  $( '#recipe_image' ).prop("src", $( this ).val());
 });
 
-// Cloudinary callback. Sets image input with image url
+// Cloudinary callback. Sets input value with recipe image url
 function imageUploaded(error, result) {
-  $( '#recipe_header_image' ).prop("src", result[0].secure_url);
+  $( '#recipe_image' ).prop("src", result[0].secure_url);
   $( '#recipe_image_url' ).val(result[0].secure_url);
 }
