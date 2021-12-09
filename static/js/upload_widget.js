@@ -42,3 +42,13 @@ document.getElementById("upload-widget").addEventListener(
   false
 );
 
+// Shows the current uploaded recipe image in edit recipe form
+$( "#recipe_image_url" ).on('change', function(event) {
+  $( '#recipe_header_image' ).prop("src", $( this ).val());
+});
+
+// Cloudinary callback. Sets image input with image url
+function imageUploaded(error, result) {
+  $( '#recipe_header_image' ).prop("src", result[0].secure_url);
+  $( '#recipe_image_url' ).val(result[0].secure_url);
+}
