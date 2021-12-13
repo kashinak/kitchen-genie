@@ -78,7 +78,7 @@ body {
 
 /* Profile Page */
 
-h3 {
+#recipe-box .info h3 {
   text-align: center;
   color:#c1b68c;
   font-size:medium;
@@ -235,7 +235,7 @@ h3 {
   padding-left: 30px;
 }
 
-#group-recipes .container .row .col-12, h3 {
+#search-results-message .container .row .col-12 h3 {
   margin-left: 250px;
   position: absolute;
 
