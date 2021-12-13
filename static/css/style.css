@@ -235,6 +235,12 @@ h3 {
   padding-left: 30px;
 }
 
+#group-recipes .container .row .col-12, h3 {
+  margin-left: 250px;
+  position: absolute;
+
+}
+
 
 /* Single Recipe Page */
 /* code snippet from Coding Addict and freecodecamp.org "HTML & CSS Project Tutorial - Build a Recipes Website": https://www.youtube.com/watch?v=-8LTPIJBGwQ */

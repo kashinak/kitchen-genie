@@ -99,7 +99,7 @@ def group_recipes():
     # convert Mongo Cursor Object into a proper list by wrapping find() inside Python list()
     recipes = list(mongo.db.recipes.find())
     return render_template(
-        "group_recipes.html", page_title="Group_Recipes", recipes=recipes)
+        "group_recipes.html", page_title="Group Recipes", recipes=recipes)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -107,7 +107,7 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template(
-        "group_recipes.html", page_title="Group_Recipes", recipes=recipes)
+        "group_recipes.html", page_title="Group Recipes", recipes=recipes)
 
 
 @app.route("/your_recipes")
@@ -146,7 +146,7 @@ def your_recipes():
 def single_recipe(recipe_id):
     print(recipe_id)
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    return render_template("single_recipe.html", page_title="Single_Recipe", recipe=recipe)
+    return render_template("single_recipe.html", recipe=recipe)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -226,13 +226,6 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("group_recipes"))
-
-
-@app.route("/get_categories")
-def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
-
 
 @app.route("/about")
 def about():

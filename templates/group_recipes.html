@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    <h2 class="page-title"><i class="fas fa-users"></i>  {{ page_title }}</h2>
    <!-- Search Bar -->
     <section id="group-recipes" class="container">
         <div class="row card" id="search-bar">
@@ -45,7 +46,11 @@
             </div>
             {% endfor %}
         {% else %}
-            <h3>No Results Found</h3>
+        <div class="row">
+            <div class="col-12">
+                <h3>No Results Found</h3>
+            </div>
+        </div>
         {% endif %} 
     </section>
 {% endblock %}

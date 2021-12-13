@@ -2,7 +2,7 @@
 {% block content %}
 
  
-            <h2 class="page-title">{{ page_title }}</h2>
+            <h2 class="page-title"><i class="fas fa-edit"></i>  {{ page_title }}</h2>
             <div class="card recipe-card">
                 <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
                     <div class="container add-recipe-selections">
@@ -10,7 +10,7 @@
                             <!-- Recipe Image Upload via Cloudinary Upload Widget -->
                             <div class="col-12 recipe-img">
                                 <img id="recipe_image" src="{{ recipe.image }}" alt="recipe image">
-                                <button id="upload-widget" class="cloudinary-button mb-3">Edit Recipe Photo</button>
+                                <button id="upload_widget" class="cloudinary-button mb-3">Edit Recipe Photo</button>
                                 <input id="recipe_image_url" name="image" type="hidden" value="{{ recipe.image }}">
                             </div>
                         </div>

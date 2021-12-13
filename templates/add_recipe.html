@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2 class="page-title">{{ page_title }}</h2>
+    <h2 class="page-title"><i class="fas fa-plus-square"></i>  {{ page_title }}</h2>
     
     <div class="card recipe-card">
         <form method="POST" action="{{ url_for('add_recipe') }}">
@@ -8,9 +8,7 @@
                 <div id="recipe-photo" class="col-12"></div>
                 <!-- Recipe Image Upload via Cloudinary Upload Widget -->
                 <div class="col-12 recipe-img pl-0">
-                 
-                    <button id="upload-widget" class="cloudinary-button mb-3">Upload Recipe Photo</button>
-                
+                    <button id="upload_widget" class="cloudinary-button mb-3">Upload Recipe Photo</button>
                 </div>
                 <div class="row recipe-name">
                     <!-- Recipe Name -->
@@ -188,7 +186,7 @@
                 }
             })
 
-        document.getElementById("upload-widget").addEventListener("click", function(){
+        document.getElementById("upload_widget").addEventListener("click", function(){
             myWidget.open();
         }, false);
     </script>
