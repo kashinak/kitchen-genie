@@ -80,8 +80,11 @@ def profile(username):
     # grab the session user's username from the db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    # convert Mongo Cursor Object into a proper list by wrapping find() inside Python list()
+    recipes = list(mongo.db.recipes.find())
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "profile.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
