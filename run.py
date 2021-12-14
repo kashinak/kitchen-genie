@@ -110,38 +110,6 @@ def search():
         "group_recipes.html", page_title="Group Recipes", recipes=recipes)
 
 
-@app.route("/your_recipes")
-def your_recipes():
-    if request.method == "POST":
-        recipe = {
-            "recipe_name": request.form.get("recipe_name"),
-            "description": request.form.get("description"),
-            "category_name": request.form.get("category_name"),
-            "cost": request.form.get("cost"),
-            "serving_size": request.form.get("serving_size"),
-            "leftover_days": request.form.get("leftover_days"),
-            "prep_time": request.form.get("prep_time"),
-            "cook_time": request.form.get("cook_time"),
-            "tools": request.form.getlist("tools"),
-            "ingredients": request.form.getlist("ingredients"),
-            "preparation": request.form.getlist("preparation"),
-            "created_by": session["user"]
-        }
-        mongo.db.recipes.insert_one(recipe)
-        flash("Recipe Successfully Added")
-        return redirect(url_for("your_recipes"))
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    servings = mongo.db.servings.find().sort("serving_size", 1)
-    leftovers = mongo.db.leftovers.find().sort("leftover_days", 1)
-    prep_times = mongo.db.prep_times.find().sort("prep_time", 1)
-    cook_times = mongo.db.cook_times.find().sort("cook_time", 1)
-    tools = mongo.db.tools.find().sort("tools", 1)
-    return render_template(
-        "your_recipes.html", page_title="Your Recipes", categories=categories, 
-        servings=servings, leftovers=leftovers, 
-        prep_times=prep_times, cook_times=cook_times, tools=tools)
-
-
 @app.route("/single_recipe/<recipe_id>")
 def single_recipe(recipe_id):
     print(recipe_id)
@@ -226,6 +194,7 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("group_recipes"))
+
 
 @app.route("/about")
 def about():
