@@ -1,33 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-            <h2 class="card-title">{{ username|capitalize }}'s Recipes</h2>
+        <h2 class="card-title">{{ username|capitalize }}'s Recipes</h2>
           
         <!-- Recipe Image Box w/View, Edit, Delete buttons -->
+    <section id="group-recipes" class="container">
         {% if recipes|length > 0 %}
             {% for recipe in recipes %}
                 {% if session.user|lower == recipe.created_by|lower %}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-sm-12">
-                            <div class="box-container">
-                                <div class="box">
-                                    <img src="{{ recipe.image }}" alt="">
-                                    <div class="info" id="recipe-box">
-                                        <h3>{{ recipe.recipe_name }}</h3>
-                                        <p><em>by: {{ recipe.created_by }}</em></p>
-                                        <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"><button>View</button></a>
-                                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><button>Edit</button></a>
-                                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"><button>Delete</button></a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 col-md-6 col-sm-12">
+                                <div class="box-container">
+                                    <div class="box">
+                                        <img src="{{ recipe.image }}" alt="">
+                                        <div class="info" id="recipe-box">
+                                            <h3>{{ recipe.recipe_name }}</h3>
+                                            <p><em>by: {{ recipe.created_by }}</em></p>
+                                            <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"><button>View</button></a>
+                                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><button>Edit</button></a>
+                                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"><button>Delete</button></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+             
                 {% endif %}
             {% endfor %}
         {% endif %}
+    </section>
          <!-- added custom inline css class .justify-content-center mb-4 to center align register link -->
         <div class="row">
             <div class="col-12 d-flex justify-content-center mb-4">
