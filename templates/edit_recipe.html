@@ -8,15 +8,15 @@
                     <div class="container add-recipe-selections">
                         <div class="row">
                             <!-- Recipe Image Upload via Cloudinary Upload Widget -->
-                            <div class="col-12 recipe-img pl-0">
+                            <div class="col-12 pl-0" id="recipe-image-div">
                                 <img id="recipe_image" src="{{ recipe.image }}" alt="recipe image">
-                                <button id="upload_widget" class="cloudinary-button mb-3">Edit Recipe Photo</button>
-                                <input id="recipe_image_url" name="image" type="hidden" value="{{ recipe.image }}">
+                                <!-- <button id="upload_widget" class="cloudinary-button mb-3">Edit Recipe Photo</button> -->
+                                <!-- <input id="recipe_image_url" name="image" type="hidden" value="{{ recipe.image }}"> -->
                             </div>
                         </div>
-                        <div class="row recipe-name">
+                        <div class="row">
                             <!-- Recipe Name -->
-                            <div class="col-12 mb-0">
+                            <div class="col-12 mb-0" id="recipe-label">
                                 <i class="fas fa-pencil-alt"></i>
                                 <label for="recipe_name" class="form-label">Add Recipe Name</label>
                             </div>

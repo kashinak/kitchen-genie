@@ -122,7 +122,7 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 1rem auto;
-  width: 90%;
+  /* width: 90%; */
 }
 
 #group-recipes .box-container .box {
@@ -234,6 +234,14 @@ body {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+@media screen and (max-width: 992px) {
+  #group-recipes .box-container .box:hover .info {
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+}
+
 
 /* Search Bar */
 .input-field {
@@ -385,7 +393,7 @@ body {
 div.card {
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+  text-align: left;
   /* my code */
   width: 60rem;
   background-color:#c1b68c;
@@ -453,10 +461,6 @@ div.card {
   }
 }
 
-div, .card {
-  text-align: center;
-}
-
 .submit-button {
   text-align: center;
 }
@@ -502,6 +506,12 @@ div, .card {
   color:#c1b68c;
   margin-bottom: 40px;
 }
+
+#recipe-image-div {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 
 /* footer */
 
