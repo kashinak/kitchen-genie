@@ -109,7 +109,7 @@ body {
 #group-recipes .heading h1 span {
   color: #FFF200;
 }
-/* 
+
 #group-recipes .box-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,7 +123,7 @@ body {
   flex-wrap: wrap;
   margin: 1rem auto;
   width: 90%;
-} */
+}
 
 #group-recipes .box-container .box {
   height: 22rem;
@@ -135,6 +135,20 @@ body {
   position: relative;
   -webkit-box-shadow: 0 0 .5rem #333;
   box-shadow: 0 0 .5rem #333;
+}
+
+@media screen and (max-width: 992px) {
+  #group-recipes .box-container .box {
+    height: 12rem;
+    width: 17rem;
+    border-radius: .5rem;
+    margin: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 0 .5rem #333;
+    box-shadow: 0 0 .5rem #333;
+  }
 }
 
 #group-recipes .box-container .box img {
@@ -231,14 +245,14 @@ body {
   padding: 10px;
 }
 
-#search-box {
-  padding-left: 30px;
-}
-
 #search-results-message .container .row .col-12 h3 {
   margin-left: 250px;
   position: absolute;
 
+}
+
+#reset a button{
+  justify-content: center;
 }
 
 
@@ -440,7 +454,7 @@ div.card {
 }
 
 div, .card {
-  text-align: left;
+  text-align: center;
 }
 
 .submit-button {

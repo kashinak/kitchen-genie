@@ -159,7 +159,7 @@
 	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	<!-- local upload instantiation -->
-	<script src="upload_widget.js" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='js/upload_widget.js') }}"></script>
     <!-- Custom JQuery script -->
 	<script>
 		$("#copyright").text(new Date().getFullYear());
