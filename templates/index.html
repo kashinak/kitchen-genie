@@ -1,4 +1,19 @@
 {% extends 'base.html' %}
+{% block header %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/vegetables_wooden_bg_small.jpg') }}')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>Kitchen Genie</h1>
+                        <span class="subheading">Saving Money With Friends</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
 {% block content %}
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7 testimonials">

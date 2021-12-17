@@ -94,23 +94,23 @@ body {
 /* group recipes */
 /* code snippet by Mr. Web Developer "Complete Responsive Food/Restaurant using HTML/CSS/JQuery/Bootstrap - Step By Step" : https://www.youtube.com/watch?v=ajtLKcOF7RM */
 
-#group-recipes {
+#dish {
   min-height: 100vh;
   width: 100vw;
 }
 
-#group-recipes .heading h1 {
+#dish .heading h1 {
   font-size: 4rem;
   color: #000;
   padding-top: 7rem;
   margin-bottom: 2rem;
 }
 
-#group-recipes .heading h1 span {
+#dish .heading h1 span {
   color: #FFF200;
 }
 
-#group-recipes .box-container {
+#dish .box-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,12 +122,12 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 1rem auto;
-  /* width: 90%; */
+  width: 90%;
 }
 
-#group-recipes .box-container .box {
-  height: 22rem;
-  width: 27rem;
+#dish .box-container .box {
+  height: 20rem;
+  width: 25rem;
   border-radius: .5rem;
   margin: 2rem;
   cursor: pointer;
@@ -137,28 +137,14 @@ body {
   box-shadow: 0 0 .5rem #333;
 }
 
-@media screen and (max-width: 992px) {
-  #group-recipes .box-container .box {
-    height: 12rem;
-    width: 17rem;
-    border-radius: .5rem;
-    margin: 2rem;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    -webkit-box-shadow: 0 0 .5rem #333;
-    box-shadow: 0 0 .5rem #333;
-  }
-}
-
-#group-recipes .box-container .box img {
+#dish .box-container .box img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-#group-recipes .box-container .box .info {
+#dish .box-container .box .info {
   position: absolute;
   top: 0;
   left: 0;
@@ -184,18 +170,19 @@ body {
   transform: scale(0);
 }
 
-#group-recipes .box-container .box .info h3 {
+#dish .box-container .box .info h3 {
   font-size: 2rem;
+  margin-bottom: 0px;
 }
 
-#group-recipes .box-container .box .info p {
+#dish .box-container .box .info p {
   font-size: 1.3rem;
   border-bottom: 0.2rem solid #FFF200;
   border-top: 0.2rem solid #FFF200;
   margin: 1rem 2rem;
 }
 
-#group-recipes .box-container .box .info button {
+#dish .box-container .box .info button {
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -213,7 +200,7 @@ body {
   margin: 10px 10px 10px 10px;
 }
 
-#group-recipes .box-container .box .info button::before {
+#dish .box-container .box .info button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -226,22 +213,14 @@ body {
   z-index: -1;
 }
 
-#group-recipes .box-container .box .info button:hover::before {
+#dish .box-container .box .info button:hover::before {
   width: 100%;
 }
 
-#group-recipes .box-container .box:hover .info {
+#dish .box-container .box:hover .info {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-
-@media screen and (max-width: 992px) {
-  #group-recipes .box-container .box:hover .info {
-    -webkit-transform: scale(.5);
-    transform: scale(.5);
-  }
-}
-
 
 /* Search Bar */
 .input-field {
@@ -398,6 +377,10 @@ div.card {
   width: 60rem;
   background-color:#c1b68c;
   justify-content: center;
+}
+
+#add-recipe-header {
+  background-position-y: top;
 }
 
 .recipe-description {

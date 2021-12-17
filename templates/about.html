@@ -1,15 +1,32 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% block header %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/about_bg_small.jpg') }}')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>Kitchen Genie</h1>
+                        <span class="subheading">Saving Money With Friends</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
 {% block content %}
-    <div class="about-page">
-        <h2>{{ page_title }}</h2>
-        <p>
-            The formation of <strong><i>Kitchen Genie</i></strong>, grew out out of simple conversations with friends and
-            family members who were
-            concerned about soaring food prices and their ability to cope with financial stress. As a full stack software
-            developer student, I decided to put my coding skills to work and build a money saving food recipe application.
-            This is a place where you can share savory, bargin recipes with your friends to help
-            dissolve financial fear and empower your bank account.
-        </p>
-        <h7><strong>Kashina Kessler | founder, <i>Kitchen Genie</i></strong></h7>
-    </div>
+    <main class="container form-container">
+        <div class="about-page">
+            <h2>{{ page_title }}</h2>
+            <p>
+                The formation of <strong><i>Kitchen Genie</i></strong>, grew out out of simple conversations with friends and
+                family members who were
+                concerned about soaring food prices and their ability to cope with financial stress. As a full stack software
+                developer student, I decided to put my coding skills to work and build a money saving food recipe application.
+                This is a place where you can share savory, bargin recipes with your friends to help
+                dissolve financial fear and empower your bank account.
+            </p>
+            <h7><strong>Kashina Kessler | founder, <i>Kitchen Genie</i></strong></h7>
+        </div>
+    </main>
 {% endblock %}
