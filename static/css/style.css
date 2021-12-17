@@ -282,6 +282,10 @@ body {
   font-size: 1rem;
 }
 
+h5 {
+  font-weight: bolder;
+}
+
 .recipe-tags {
   display: flex;
   align-items: center;
