@@ -15,7 +15,7 @@
     </header>
 {% endblock %}
 {% block content %}
-    <h2 class="page-title">{{ page_title }}</h2>
+    <h2 class="page-title"><i class="fas fa-users"></i>  {{ page_title }}</h2>
    <!-- Search Bar -->
    <div class="container">
         <div class="row card" id="search-bar">
@@ -45,7 +45,7 @@
                 <div class="box">
                     <img src="{{ recipe.image }}" alt="">
                     <div class="info">
-                        <h3>{{ recipe.recipe_name }}</h3>
+                        <h3 class="recipe-name">{{ recipe.recipe_name }}</h3>
                         <p><em>by: {{ recipe.created_by }}</em></p>
                         <a href="{{ url_for('single_recipe', recipe_id=recipe._id) }}"><button>View</button></a>
                         {% if session.user|lower == recipe.created_by|lower %}

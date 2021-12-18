@@ -15,8 +15,9 @@
     </header>
 {% endblock %}
 {% block content %}
+<main class="container form-container">
     <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7 testimonials">
+        <div class="col-md-10 col-lg-8 col-xl-10 testimonials">
             <!-- Post preview-->
             <!-- I deleted <a> links for authors and h2, h3 becuase I want to save blog links for a future version-->
             <div class="post-preview">
@@ -74,4 +75,5 @@
                     href="{{ url_for('register') }}">Register</a></div>
         </div>
     </div>
+</main>
 {% endblock %}
